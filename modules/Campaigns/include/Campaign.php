@@ -466,16 +466,15 @@ class Campaign {
 		$sql = 'SELECT user_id, hash FROM campaign_hash WHERE campaign_id='.$this->getId();
 		$users = Database::singleton()->query_fetch_all($sql);
 		$retUsers = array();
-
+		var_dump($users);
 		foreach($users as $user){
-			$sql = 'SELECT id FROM campaign_votes WHERE hash="'.$user['hash'].'" AND campaign_id="'.$this->id.' limit 1';
+			$sql = 'SELECT id FROM campaign_votes WHERE hash="'.$user['hash'].'" limit 1';
 			$result = Database::singleton()->query($sql);
-			
+			var_dump($result);
 			if((($voted && $result) || (!$voted && !$result))){
 				$retUsers[] = new CampaignUser($user['user_id']);
 			}
 		}
-		var_dump($retUsers);
 		return $retUsers;
 	}
 }
