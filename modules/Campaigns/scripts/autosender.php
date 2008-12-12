@@ -13,6 +13,7 @@
 	var_dump($results);
 	foreach($results as &$campaign){
 		$campaign = new Campaign($campaign['id']);
+		var_dump($campaign->calcStatus().'<br/>');
 		switch ($campaign->calcStatus(true)){
 			case 2:
 				break;
