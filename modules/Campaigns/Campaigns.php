@@ -175,6 +175,13 @@ class Module_Campaigns extends Module {
 					return $this->smarty->fetch('admin/voted_list.tpl');
 				}
 				return $this->topLevelAdmin();
+			case 'archivecampaign':
+				if($this->user->hasPerm('addcampaign')){
+					$campaign = new Campaign($_REQUEST['campaign_id']);
+					$campaign->setArchiveStatus(1);
+					$campaign->save();
+				}
+				return $this->topLevelAdmin();
 			default:
 				if($this->user->hasPerm('admin') && !$this->user->hasPerm('viewcampaign')){
 					header("Location: /admin/Campaigns&section=listbilling");

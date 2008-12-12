@@ -1,7 +1,7 @@
 <h3>Viewing <i>{$campaign->getName()}</i> results (<a href="/admin/Campaigns" title="Back">Back</a>)</h3>
 
 <ul id="resultsList">
-{foreach from=$campaign->sortVotes() item=choice}
+{foreach from=$campaign->getChoices() item=choice}
 	<li class="choiceResult">{$choice->getChoice()}</li>
 	<li>
 		<ul id="resultsSubList">
