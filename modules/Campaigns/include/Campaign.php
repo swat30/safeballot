@@ -468,15 +468,14 @@ class Campaign {
 		$retUsers = array();
 
 		foreach($users as $user){
-			$sql = 'SELECT id FROM campaign_votes WHERE hash="'.$user['hash'].'" limit 1';
+			$sql = 'SELECT id FROM campaign_votes WHERE hash="'.$user['hash'].'" AND campaign_id="'.$this->id.' limit 1';
 			$result = Database::singleton()->query($sql);
 			
 			if((($voted && $result) || (!$voted && !$result))){
 				$retUsers[] = new CampaignUser($user['user_id']);
 			}
-			var_dump($retUsers);
 		}
-		
+		var_dump($retUsers);
 		return $retUsers;
 	}
 }
