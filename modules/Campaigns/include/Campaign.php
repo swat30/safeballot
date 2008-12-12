@@ -22,6 +22,7 @@ class Campaign {
 			$this->endDate = $result['endDate'];
 			$this->status = $this->calcStatus();
 			$this->archived = $result['status'];
+			$this->autosend = $result['autosend'];
 		}
 	}
 	
@@ -57,6 +58,10 @@ class Campaign {
 		return $this->archived;
 	}
 	
+	public function getAutoSend() {
+		return $this->autosend;
+	}
+	
 	public function setId($id){
 		$this->id = $id;
 	}
@@ -89,6 +94,10 @@ class Campaign {
 		$this->archived = $status;
 	}
 	
+	public function setAutoSend($status){
+		$this->autosend = $status;
+	}
+	
 	public function save(){
 		if(!is_null($this->id)){
 			$sql = "UPDATE campaigns SET ";
@@ -114,6 +123,9 @@ class Campaign {
 		if(!is_null($this->archived)){
 			$sql .= "status = \"".e($this->archived)."\", ";
 		}
+		if(!is_null($this->autosend)){
+			$sql .= "autosend = \"".e($this->autosend)."\", ";
+		}
 		
 		if (!is_null($this->id)) {
 			$sql .= 'id="' . e($this->id) . '" where id="' . $this->id . '"';
@@ -132,12 +144,21 @@ class Campaign {
 		Database::singleton()->query($sql);
 	}
 	
-	public function calcStatus(){
+	public function calcStatus($int = false){
 		$today = date('U');
 		if($today > strtotime($this->endDate)){
+			if($int){
+				return 0;
+			}
 			return 'Ended on '.$this->endDate;
 		} else if($today < strtotime($this->startDate)){
+			if($int){
+				return 2;
+			}
 			return 'Upcoming on '.$this->startDate;
+		}
+		if($int){
+			return 1;
 		}
 		return 'In progress, ends on '.$this->endDate;
 	}
@@ -206,6 +227,8 @@ class Campaign {
 		$form = new Form ( 'campaign_addedit', 'POST', $target, '', array ('class' => 'admin' ) );
 		
 		$form->addElement('text', 'name', 'Name');
+		$form->addElement('select', 'auto_send', 'Auto-reminder on start', array(0=>'Disable', 1=>'Enable'));
+		
 		$date[] = $form->createElement('date', 'start_date', 'Start Date', array('format'=>'d F Y - H : i', 'addEmptyOption'=>'true', 'emptyOptionValue'=>'', 'emptyOptionText'=> 'Select', 'minYear'=>date('Y'), 'maxYear'=>date('Y') + 3), array( 'onchange' => 'return !updateEndDate(this)' ));
 		$date[] = $form->createElement('date', 'end_date', 'End Date', array('format'=>'d F Y - H : i', 'addEmptyOption'=>'true', 'emptyOptionValue'=>'', 'emptyOptionText'=> 'Select', 'minYear'=>date('Y'), 'maxYear'=>date('Y') + 5));
 		$form->addElement($date[0]);
@@ -221,6 +244,7 @@ class Campaign {
 			$defaultValues ['start_date'] = $this->getStartDate();
 			$defaultValues ['end_date'] = $this->getEndDate();
 			$defaultValues ['description'] = $this->getDescription();
+			$defaultValues ['auto_send'] = $this->getAutoSend();
 
 			$form->setDefaults( $defaultValues );
 		}
@@ -237,6 +261,7 @@ class Campaign {
 			$this->setStartDate($this->formatDate($form->exportValue('start_date')));
 			$this->setEndDate($this->formatDate($form->exportValue('end_date')));
 			$this->setStatus($this->calcStatus());
+			$this->setAutoSend($form->exportValue('auto_send'));
 			$this->save();
 		}
 		
@@ -385,8 +410,14 @@ class Campaign {
 		return count($results);
 	}
 	
-	public function mailOut($what){
+	public function mailOut($what, $authgroup = null, $useremail = null){
 		$errCnt = 0;
+		if(is_null($authgroup)){
+			$authgroup = $_SESSION['authenticated_user']->getAuthGroupName();
+		}
+		if(is_null($useremail)){
+			$useremail = $_SESSION['authenticated_user']->getEmail();
+		}
 		switch($what){
 			case 'votes':
 				$recipients = Campaign::getRecipients($this->group);
@@ -394,13 +425,13 @@ class Campaign {
 				foreach($recipients as &$recipient){
 					if(!is_null(trim($recipient->getEmail())) && !is_null($recipient->getHash($this->id))){
 						$body = "Dear ".$recipient->getName().",\n\n";
-						$body .= $_SESSION['authenticated_user']->getAuthGroupName()." would like to invite you to vote on the following campaign: ";
+						$body .= $authgroup." would like to invite you to vote on the following campaign: ";
 						$body .= $this->getName();
 						$body .= "\nVoting begins on ".$this->startDate." and ends on ".$this->endDate.". You will only be able to vote during this time period.";
 						$body .= "\n\nPlease goto the following link to vote: http://".$_SERVER['HTTP_HOST']."/Vote/".$recipient->getHash($this->getId());
 						$body .= "\nOr you may goto http://".$_SERVER['HTTP_HOST']."/Vote/ and enter '".$recipient->getHash($this->getId())."'.";
-						$body .= "\n\nIf you have any questions please contact ".$_SESSION['authenticated_user']->getAuthGroupName()." at ".$_SESSION['authenticated_user']->getEmail();
-						if(!mail($recipient->getEmail(), 'Voting Campaign', $body, "From: Safeballot <safeballot@".$_SERVER['HTTP_HOST'].">\nReply-to: ".$_SESSION['authenticated_user']->getAuthGroupName()." <".$_SESSION['authenticated_user']->getEmail().">")){
+						$body .= "\n\nIf you have any questions please contact ".$authgroup." at ".$useremail;
+						if(!mail($recipient->getEmail(), 'Voting Campaign', $body, "From: Safeballot <safeballot@".$_SERVER['HTTP_HOST'].">\nReply-to: ".$authgroup." <".$useremail.">")){
 							$errCnt++;
 						}
 					}
