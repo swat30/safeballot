@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/tinymce/!svn/ver/972/tinymce/trunk/jscripts/tiny_mce/classes
+END
+Developer.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/tinymce/!svn/ver/520/tinymce/trunk/jscripts/tiny_mce/classes/Developer.js
+END
+Editor.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svnroot/tinymce/!svn/ver/971/tinymce/trunk/jscripts/tiny_mce/classes/Editor.js
+END
+EditorCommands.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/tinymce/!svn/ver/958/tinymce/trunk/jscripts/tiny_mce/classes/EditorCommands.js
+END
+tinymce.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svnroot/tinymce/!svn/ver/966/tinymce/trunk/jscripts/tiny_mce/classes/tinymce.js
+END
+ControlManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/tinymce/!svn/ver/920/tinymce/trunk/jscripts/tiny_mce/classes/ControlManager.js
+END
+ForceBlocks.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/tinymce/!svn/ver/941/tinymce/trunk/jscripts/tiny_mce/classes/ForceBlocks.js
+END
+AddOnManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/tinymce/!svn/ver/896/tinymce/trunk/jscripts/tiny_mce/classes/AddOnManager.js
+END
+UndoManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/tinymce/!svn/ver/828/tinymce/trunk/jscripts/tiny_mce/classes/UndoManager.js
+END
+EditorManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/tinymce/!svn/ver/920/tinymce/trunk/jscripts/tiny_mce/classes/EditorManager.js
+END
+WindowManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/tinymce/!svn/ver/890/tinymce/trunk/jscripts/tiny_mce/classes/WindowManager.js
+END
+Popup.js
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/tinymce/!svn/ver/920/tinymce/trunk/jscripts/tiny_mce/classes/Popup.js
+END

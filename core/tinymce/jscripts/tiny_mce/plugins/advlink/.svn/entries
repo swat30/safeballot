@@ -1,0 +1,76 @@
+9
+
+dir
+972
+https://tinymce.svn.sourceforge.net/svnroot/tinymce/tinymce/trunk/jscripts/tiny_mce/plugins/advlink
+https://tinymce.svn.sourceforge.net/svnroot/tinymce
+
+
+
+2008-06-22T16:59:27.743555Z
+883
+spocke
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4bc337fc-6b0f-0410-8579-f0892687066e
+
+editor_plugin.js
+file
+
+
+
+
+2008-08-21T17:16:16.000000Z
+519f312b12dbc801f5d199f19ea650bb
+2008-01-14T19:08:58.524690Z
+539
+spocke
+has-props
+
+langs
+dir
+
+link.htm
+file
+
+
+
+
+2008-08-21T17:16:16.000000Z
+cf9a221fb8fe3ca897c5dfd5fd5553a6
+2008-04-07T15:58:06.503182Z
+771
+spocke
+has-props
+
+editor_plugin_src.js
+file
+
+
+
+
+2008-08-21T17:16:16.000000Z
+a9af17cd71f94bf984e0a864e2f2c428
+2008-01-14T19:08:58.524690Z
+539
+spocke
+has-props
+
+css
+dir
+
+js
+dir
+

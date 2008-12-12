@@ -1,0 +1,100 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/core/PEAR/PEAR/Task
+svn://svn.clientview.ca
+
+
+
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+Windowseol.php
+file
+
+
+
+
+2008-08-21T17:15:05.000000Z
+2ce493f5d43d7df681a1b45034060904
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+Postinstallscript
+dir
+
+Replace.php
+file
+
+
+
+
+2008-08-21T17:15:05.000000Z
+5a3d680bb9c327530f696d830b8b605b
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+Unixeol
+dir
+
+Postinstallscript.php
+file
+
+
+
+
+2008-08-21T17:15:05.000000Z
+b9e5cc9fed2ebad6d2011ee6a4d592bf
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+Unixeol.php
+file
+
+
+
+
+2008-08-21T17:15:05.000000Z
+f9dc0e5d8d8957ea207d9da8e37dcb26
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+Windowseol
+dir
+
+Replace
+dir
+
+Common.php
+file
+
+
+
+
+2008-08-21T17:15:05.000000Z
+b5a728f8d59013ab6d5077f27b517a96
+2008-07-03T20:39:19.616486Z
+5908
+chris
+

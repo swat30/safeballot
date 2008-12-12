@@ -1,0 +1,12 @@
+K 13
+svn:externals
+V 128
+libs http://smarty-php.googlecode.com/svn/trunk/libs/
+tinymce https://tinymce.svn.sourceforge.net/svnroot/tinymce/tinymce/trunk
+
+K 10
+svn:ignore
+V 5
+temp
+
+END

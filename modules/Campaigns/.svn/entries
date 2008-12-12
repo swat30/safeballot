@@ -1,0 +1,73 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/modules/Campaigns/trunk
+svn://svn.clientview.ca
+
+
+
+2008-09-19T17:47:44.810711Z
+7546
+jacob
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+plugins
+dir
+
+tests
+dir
+
+include
+dir
+
+images
+dir
+
+css
+dir
+
+Campaigns.php
+file
+
+
+
+
+2008-09-19T17:45:29.000000Z
+e7b23629a10769953e8a9f588096f53b
+2008-09-19T17:46:41.964866Z
+7544
+jacob
+
+js
+dir
+
+templates
+dir
+
+schema.sql
+file
+
+
+
+
+2008-08-21T17:16:55.000000Z
+94bdaf66c712772b5735edfe357b4236
+2008-08-15T19:25:34.313618Z
+6862
+jacob
+

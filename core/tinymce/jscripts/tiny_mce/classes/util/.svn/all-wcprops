@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/tinymce/!svn/ver/928/tinymce/trunk/jscripts/tiny_mce/classes/util
+END
+Dispatcher.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/tinymce/!svn/ver/743/tinymce/trunk/jscripts/tiny_mce/classes/util/Dispatcher.js
+END
+UnitTester.js
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svnroot/tinymce/!svn/ver/394/tinymce/trunk/jscripts/tiny_mce/classes/util/UnitTester.js
+END
+Cookie.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/tinymce/!svn/ver/520/tinymce/trunk/jscripts/tiny_mce/classes/util/Cookie.js
+END
+JSON.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/tinymce/!svn/ver/920/tinymce/trunk/jscripts/tiny_mce/classes/util/JSON.js
+END
+URI.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/tinymce/!svn/ver/928/tinymce/trunk/jscripts/tiny_mce/classes/util/URI.js
+END
+XHR.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svnroot/tinymce/!svn/ver/832/tinymce/trunk/jscripts/tiny_mce/classes/util/XHR.js
+END
+JSONRequest.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/tinymce/!svn/ver/578/tinymce/trunk/jscripts/tiny_mce/classes/util/JSONRequest.js
+END

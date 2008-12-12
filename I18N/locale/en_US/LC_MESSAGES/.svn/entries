@@ -1,0 +1,53 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/I18N/locale/en_US/LC_MESSAGES
+svn://svn.clientview.ca
+
+
+
+2007-12-23T05:48:21.083575Z
+3962
+mini
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+messages.mo
+file
+
+
+
+
+2008-08-21T17:14:38.000000Z
+71e2d4871360e3a21f1ed37545fa82f5
+2007-12-23T05:48:21.083575Z
+3962
+mini
+has-props
+
+messages.po
+file
+
+
+
+
+2008-08-21T17:14:38.000000Z
+e26534140ad27a88282b40985da554ea
+2007-12-23T05:48:21.083575Z
+3962
+mini
+

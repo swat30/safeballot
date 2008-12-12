@@ -1,0 +1,52 @@
+9
+
+dir
+972
+https://tinymce.svn.sourceforge.net/svnroot/tinymce/tinymce/trunk/jscripts/tiny_mce/plugins/paste/js
+https://tinymce.svn.sourceforge.net/svnroot/tinymce
+
+
+
+2008-02-25T17:16:55.356763Z
+638
+spocke
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4bc337fc-6b0f-0410-8579-f0892687066e
+
+pasteword.js
+file
+
+
+
+
+2008-08-21T17:16:20.000000Z
+5760c35f976c0b076df0c043e3842de7
+2008-02-25T17:16:55.356763Z
+638
+spocke
+
+pastetext.js
+file
+
+
+
+
+2008-08-21T17:16:20.000000Z
+5d078052a103321a9d90921f669bb6a9
+2007-11-01T12:58:49.815594Z
+324
+spocke
+

@@ -1,0 +1,275 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2772/trunk/libs/plugins
+END
+function.html_image.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2331/trunk/libs/plugins/function.html_image.php
+END
+modifier.spacify.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.spacify.php
+END
+modifier.count_sentences.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.count_sentences.php
+END
+modifier.count_paragraphs.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.count_paragraphs.php
+END
+modifier.escape.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2344/trunk/libs/plugins/modifier.escape.php
+END
+compiler.assign.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2720/trunk/libs/plugins/compiler.assign.php
+END
+modifier.strip.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2094/trunk/libs/plugins/modifier.strip.php
+END
+modifier.count_words.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.count_words.php
+END
+modifier.cat.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2094/trunk/libs/plugins/modifier.cat.php
+END
+modifier.debug_print_var.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2648/trunk/libs/plugins/modifier.debug_print_var.php
+END
+modifier.replace.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.replace.php
+END
+function.eval.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2335/trunk/libs/plugins/function.eval.php
+END
+modifier.string_format.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.string_format.php
+END
+modifier.strip_tags.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.strip_tags.php
+END
+modifier.nl2br.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2094/trunk/libs/plugins/modifier.nl2br.php
+END
+modifier.default.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.default.php
+END
+modifier.date_format.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2688/trunk/libs/plugins/modifier.date_format.php
+END
+modifier.capitalize.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2543/trunk/libs/plugins/modifier.capitalize.php
+END
+function.cycle.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2094/trunk/libs/plugins/function.cycle.php
+END
+modifier.count_characters.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.count_characters.php
+END
+modifier.lower.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.lower.php
+END
+block.textformat.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2335/trunk/libs/plugins/block.textformat.php
+END
+function.popup.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2346/trunk/libs/plugins/function.popup.php
+END
+function.assign_debug_info.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/2335/trunk/libs/plugins/function.assign_debug_info.php
+END
+function.html_radios.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2201/trunk/libs/plugins/function.html_radios.php
+END
+outputfilter.trimwhitespace.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2770/trunk/libs/plugins/outputfilter.trimwhitespace.php
+END
+function.html_table.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2556/trunk/libs/plugins/function.html_table.php
+END
+modifier.wordwrap.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.wordwrap.php
+END
+modifier.regex_replace.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2772/trunk/libs/plugins/modifier.regex_replace.php
+END
+function.html_options.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2335/trunk/libs/plugins/function.html_options.php
+END
+function.counter.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/2335/trunk/libs/plugins/function.counter.php
+END
+shared.make_timestamp.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/2335/trunk/libs/plugins/shared.make_timestamp.php
+END
+function.html_select_time.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2335/trunk/libs/plugins/function.html_select_time.php
+END
+function.mailto.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2546/trunk/libs/plugins/function.mailto.php
+END
+function.popup_init.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/2530/trunk/libs/plugins/function.popup_init.php
+END
+function.debug.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2094/trunk/libs/plugins/function.debug.php
+END
+function.fetch.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2335/trunk/libs/plugins/function.fetch.php
+END
+function.math.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/2409/trunk/libs/plugins/function.math.php
+END
+modifier.indent.php
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.indent.php
+END
+modifier.truncate.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2673/trunk/libs/plugins/modifier.truncate.php
+END
+function.html_select_date.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/2696/trunk/libs/plugins/function.html_select_date.php
+END
+shared.escape_special_chars.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/2335/trunk/libs/plugins/shared.escape_special_chars.php
+END
+function.html_checkboxes.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2094/trunk/libs/plugins/function.html_checkboxes.php
+END
+modifier.upper.php
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2335/trunk/libs/plugins/modifier.upper.php
+END
+function.config_load.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/2347/trunk/libs/plugins/function.config_load.php
+END

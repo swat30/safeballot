@@ -1,0 +1,82 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/core/PEAR/Auth
+svn://svn.clientview.ca
+
+
+
+2008-04-10T00:44:43.752402Z
+4330
+chris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+Frontend
+dir
+
+Container
+dir
+
+Auth.php
+file
+
+
+
+
+2008-08-21T17:15:22.000000Z
+3db4bed05ee42a45064360c185babcfc
+2008-02-25T21:13:56.203983Z
+4092
+mini
+
+Container.php
+file
+
+
+
+
+2008-08-21T17:15:22.000000Z
+b1dc665b8f34b2c0743b8065f0afedbf
+2008-04-10T00:41:24.600756Z
+4328
+chris
+
+Controller.php
+file
+
+
+
+
+2008-08-21T17:15:22.000000Z
+4cd779a507fd8a196f5c40fdc8ac2321
+2008-04-10T00:41:24.600756Z
+4328
+chris
+
+Anonymous.php
+file
+
+
+
+
+2008-08-21T17:15:22.000000Z
+7ddc0ffcb8b92481e3167da27f3e2996
+2008-04-10T00:41:24.600756Z
+4328
+chris
+

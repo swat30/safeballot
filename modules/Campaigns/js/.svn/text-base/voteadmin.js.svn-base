@@ -1,0 +1,60 @@
+var cur = 0;
+
+var addChoice = function(link, nId) {
+	var ul = $(link).up('form').getElementsBySelector('ul').last();
+	var pchoiceNum;
+	
+	if(ul.select('li').size() > 0){
+		var lastLabel = ul.select('li').last().down('label');
+		lastLabel.innerHTML.scan(/[0-9]+/, function(match){ pchoiceNum = (parseInt(match[0]) + 1)});
+	} else {
+		pchoiceNum = 1;
+	}
+	cur++;
+	
+	var input = Builder.node('input', { type: 'text', name: 'nChoice['+(cur)+']', style: 'background-color: yellow;' });
+	var label = Builder.node('label', { htmlFor: 'nChoice['+(cur)+']'}, 'Choice '+(pchoiceNum)+": ");
+	var newLi = Builder.node('li', [label, input]);
+	ul.appendChild(newLi);
+
+	return true;
+}
+
+var updateEndDate = function(element) {
+	var startEl = element.getElementsBySelector('option');
+	var num;
+	var elPart = element.readAttribute('name').sub("start_date", "");
+	var endEl = $$('[name="end_date'+elPart+'"]')['0'].getElementsBySelector('option');
+	
+	startEl.each(function(el) {
+		if (el.selected) {
+			num = el.value;
+		}
+	});
+	
+	endEl.each(function(el) {
+		if (el.readAttribute('value') == num){
+			el.selected=true;
+		} else if (el.selected) {
+			el.selected=false;
+		}
+	});
+}
+
+var choiceDelete = function(element) {
+	var disInput = element.up('li').down('input');
+	var disLabel = element.up('li').down('label');
+	var choiceNum;
+	disLabel.innerHTML.scan(/[0-9]+/, function(match){ choiceNum = match[0]});
+	var desc = element.up('ul').childElements();
+	
+	element.up('li').toggle();
+	disInput.value = null;
+	choiceNum = 1;
+	desc.each(function(item) {
+		if(item.getStyle('display') != 'none'){
+			item.down('label').innerHTML = 'Choice '+choiceNum+': ';
+			choiceNum++;
+		}
+	});
+}

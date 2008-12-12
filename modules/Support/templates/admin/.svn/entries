@@ -1,0 +1,52 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/modules/Support/trunk/templates/admin
+svn://svn.clientview.ca
+
+
+
+2008-05-07T19:09:09.855449Z
+5016
+chris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+ticket.tpl
+file
+
+
+
+
+2008-08-21T17:16:47.000000Z
+214e52120e9a47fb48303e08e722359b
+2008-05-07T18:46:49.052921Z
+5013
+chris
+
+support.tpl
+file
+
+
+
+
+2008-08-21T17:16:47.000000Z
+f225c6a851287260f72e8b296d478fea
+2008-05-07T19:09:09.855449Z
+5016
+chris
+

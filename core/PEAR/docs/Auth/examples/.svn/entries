@@ -1,0 +1,52 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/core/PEAR/docs/Auth/examples
+svn://svn.clientview.ca
+
+
+
+2008-02-25T21:13:56.203983Z
+4092
+mini
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+multi-container.php
+file
+
+
+
+
+2008-08-21T17:15:09.000000Z
+c0234bbeeb10e24cdb6f64272e5e9831
+2008-02-25T21:13:56.203983Z
+4092
+mini
+
+logging.php
+file
+
+
+
+
+2008-08-21T17:15:09.000000Z
+797b51ba0f58858ab014771aa1b26fd6
+2008-02-25T21:13:56.203983Z
+4092
+mini
+

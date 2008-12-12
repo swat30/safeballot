@@ -1,0 +1,54 @@
+9
+
+dir
+972
+https://tinymce.svn.sourceforge.net/svnroot/tinymce/tinymce/trunk/jscripts/tiny_mce/classes/adapter/jquery
+https://tinymce.svn.sourceforge.net/svnroot/tinymce
+
+
+
+2008-01-07T16:30:32.150429Z
+520
+spocke
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4bc337fc-6b0f-0410-8579-f0892687066e
+
+jquery.js
+file
+
+
+
+
+2008-08-21T17:16:26.000000Z
+05d7260925bffcb97c46c66895466193
+2007-11-05T17:03:49.820086Z
+352
+spocke
+has-props
+
+adapter.js
+file
+
+
+
+
+2008-08-21T17:16:26.000000Z
+80f150f64eb1eb981eb3cbb77267179f
+2008-01-07T16:30:32.150429Z
+520
+spocke
+has-props
+

@@ -1,0 +1,13 @@
+K 13
+svn:externals
+V 464
+Content svn://svn.clientview.ca/modules/Content/branches/1.2
+Menu svn://svn.clientview.ca/modules/Menu/branches/1.2
+Blocks svn://svn.clientview.ca/modules/Blocks/branches/1.1
+User svn://svn.clientview.ca/modules/User/branches/1.2-dev
+Support svn://svn.clientview.ca/modules/Support/trunk
+SEO svn://svn.clientview.ca/modules/SEO/branches/1.1
+Templater svn://svn.clientview.ca/modules/Templater/branches/1.0
+Campaigns svn://svn.clientview.ca/modules/Campaigns/trunk
+
+END

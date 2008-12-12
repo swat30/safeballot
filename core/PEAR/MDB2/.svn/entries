@@ -1,0 +1,79 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/core/PEAR/MDB2
+svn://svn.clientview.ca
+
+
+
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+Iterator.php
+file
+
+
+
+
+2008-08-21T17:15:20.000000Z
+023c4bda6db2d8f277d8d3c76dc8f850
+2008-04-21T19:30:30.999656Z
+4536
+chris
+
+LOB.php
+file
+
+
+
+
+2008-08-21T17:15:20.000000Z
+bd83458d9b7a044cb44956244a584849
+2008-04-21T19:30:30.999656Z
+4536
+chris
+
+Date.php
+file
+
+
+
+
+2008-08-21T17:15:20.000000Z
+af81dd360b2d2d09f8c978214b06a553
+2008-04-21T19:30:30.999656Z
+4536
+chris
+
+Extended.php
+file
+
+
+
+
+2008-08-21T17:15:20.000000Z
+11277575840f8ee5bae9c9c378cc0502
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+Driver
+dir
+

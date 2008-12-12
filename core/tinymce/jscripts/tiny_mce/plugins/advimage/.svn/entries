@@ -1,0 +1,79 @@
+9
+
+dir
+972
+https://tinymce.svn.sourceforge.net/svnroot/tinymce/tinymce/trunk/jscripts/tiny_mce/plugins/advimage
+https://tinymce.svn.sourceforge.net/svnroot/tinymce
+
+
+
+2008-07-09T10:40:52.993959Z
+890
+spocke
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4bc337fc-6b0f-0410-8579-f0892687066e
+
+editor_plugin.js
+file
+
+
+
+
+2008-08-21T17:16:14.000000Z
+848ad22a9baff75c57d0d7f645f361ba
+2008-03-07T13:52:41.011321Z
+677
+spocke
+has-props
+
+langs
+dir
+
+editor_plugin_src.js
+file
+
+
+
+
+2008-08-21T17:16:14.000000Z
+23c22fe387cfa95374c676f255bdbef3
+2008-03-07T13:52:41.011321Z
+677
+spocke
+has-props
+
+css
+dir
+
+image.htm
+file
+
+
+
+
+2008-08-21T17:16:14.000000Z
+2c74a77fd2098bc026a91dae3219d01e
+2008-04-07T15:58:06.503182Z
+771
+spocke
+has-props
+
+img
+dir
+
+js
+dir
+

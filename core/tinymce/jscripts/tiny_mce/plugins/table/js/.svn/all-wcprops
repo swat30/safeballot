@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svnroot/tinymce/!svn/ver/952/tinymce/trunk/jscripts/tiny_mce/plugins/table/js
+END
+row.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/tinymce/!svn/ver/741/tinymce/trunk/jscripts/tiny_mce/plugins/table/js/row.js
+END
+table.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/tinymce/!svn/ver/952/tinymce/trunk/jscripts/tiny_mce/plugins/table/js/table.js
+END
+cell.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/tinymce/!svn/ver/906/tinymce/trunk/jscripts/tiny_mce/plugins/table/js/cell.js
+END
+merge_cells.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svnroot/tinymce/!svn/ver/890/tinymce/trunk/jscripts/tiny_mce/plugins/table/js/merge_cells.js
+END

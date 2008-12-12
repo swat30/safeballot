@@ -1,0 +1,58 @@
+9
+
+dir
+972
+https://tinymce.svn.sourceforge.net/svnroot/tinymce/tinymce/trunk/jscripts/tiny_mce/plugins/pagebreak
+https://tinymce.svn.sourceforge.net/svnroot/tinymce
+
+
+
+2008-03-17T18:46:47.580934Z
+730
+spocke
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4bc337fc-6b0f-0410-8579-f0892687066e
+
+editor_plugin.js
+file
+
+
+
+
+2008-08-21T17:16:09.000000Z
+a1c5a59a36f772bc526411a9c8e74c63
+2008-03-17T18:46:47.580934Z
+730
+spocke
+
+editor_plugin_src.js
+file
+
+
+
+
+2008-08-21T17:16:09.000000Z
+32968e1ab6272b9aec2fc38207b24599
+2008-03-17T18:46:47.580934Z
+730
+spocke
+
+css
+dir
+
+img
+dir
+

@@ -1,0 +1,54 @@
+9
+
+dir
+972
+https://tinymce.svn.sourceforge.net/svnroot/tinymce/tinymce/trunk/jscripts/tiny_mce/plugins/contextmenu
+https://tinymce.svn.sourceforge.net/svnroot/tinymce
+
+
+
+2008-05-15T11:54:40.417072Z
+848
+spocke
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4bc337fc-6b0f-0410-8579-f0892687066e
+
+editor_plugin.js
+file
+
+
+
+
+2008-08-21T17:16:18.000000Z
+47f5b7af1ec73bf958d29045b968cea2
+2008-05-15T11:54:40.417072Z
+848
+spocke
+has-props
+
+editor_plugin_src.js
+file
+
+
+
+
+2008-08-21T17:16:18.000000Z
+dc73f6362295294e4ce7f99fec249499
+2008-05-15T11:54:40.417072Z
+848
+spocke
+has-props
+

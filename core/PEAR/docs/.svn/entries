@@ -1,0 +1,82 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/core/PEAR/docs
+svn://svn.clientview.ca
+
+
+
+2008-07-04T18:56:06.678455Z
+5918
+chris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+PEAR_Frontend_Web
+dir
+
+HTML_QuickForm
+dir
+
+MDB2
+dir
+
+Archive_Tar
+dir
+
+HTTP_Request
+dir
+
+PEAR
+dir
+
+MIME_Type
+dir
+
+Mail_Mime
+dir
+
+HTML_QuickForm_advmultiselect
+dir
+
+HTML_Template_IT
+dir
+
+Pager
+dir
+
+Auth
+dir
+
+SOAP
+dir
+
+Structures_Graph
+dir
+
+Config
+dir
+
+HTML_AJAX
+dir
+
+HTML_QuickForm_Renderer_Tableless
+dir
+
+Net_URL
+dir
+

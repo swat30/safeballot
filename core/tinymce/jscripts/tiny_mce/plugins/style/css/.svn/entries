@@ -1,0 +1,41 @@
+9
+
+dir
+972
+https://tinymce.svn.sourceforge.net/svnroot/tinymce/tinymce/trunk/jscripts/tiny_mce/plugins/style/css
+https://tinymce.svn.sourceforge.net/svnroot/tinymce
+
+
+
+2007-11-01T12:58:49.815594Z
+324
+spocke
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4bc337fc-6b0f-0410-8579-f0892687066e
+
+props.css
+file
+
+
+
+
+2008-08-21T17:16:17.000000Z
+3442be519751bad52b23dc35a1de30d5
+2007-11-01T12:58:49.815594Z
+324
+spocke
+has-props
+

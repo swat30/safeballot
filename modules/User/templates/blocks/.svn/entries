@@ -1,0 +1,40 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/modules/User/branches/1.2-dev/templates/blocks
+svn://svn.clientview.ca
+
+
+
+2008-08-06T17:13:22.989439Z
+6736
+jacob
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+login_block.tpl
+file
+
+
+
+
+2008-08-21T17:16:44.000000Z
+134d7bf1e10723e3c80344c57f555701
+2008-04-29T15:19:17.961785Z
+4739
+jon
+

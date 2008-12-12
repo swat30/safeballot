@@ -1,0 +1,58 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/I18N
+svn://svn.clientview.ca
+
+
+
+2007-12-23T05:48:21.083575Z
+3962
+mini
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+locale
+dir
+
+site.c
+file
+
+
+
+
+2008-08-21T17:14:38.000000Z
+f0e4d30b2b137d6b6c86679ff8b736f0
+2007-12-23T05:48:21.083575Z
+3962
+mini
+
+config
+file
+
+
+
+
+2008-08-21T17:14:38.000000Z
+0c4d391eaf1a15490183f83d94202c36
+2007-12-20T05:25:28.104399Z
+3961
+mini
+
+po
+dir
+

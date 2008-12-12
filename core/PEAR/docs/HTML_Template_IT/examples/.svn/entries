@@ -1,0 +1,55 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/core/PEAR/docs/HTML_Template_IT/examples
+svn://svn.clientview.ca
+
+
+
+2008-02-25T21:13:56.203983Z
+4092
+mini
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+sample_it.php
+file
+
+
+
+
+2008-08-21T17:15:09.000000Z
+ba285cf25750a900690f2388ee31a103
+2008-02-25T21:13:56.203983Z
+4092
+mini
+
+templates
+dir
+
+sample_itx_addblockfile.php
+file
+
+
+
+
+2008-08-21T17:15:09.000000Z
+4b2a932053e321a0cf9ced5295113f09
+2008-02-25T21:13:56.203983Z
+4092
+mini
+

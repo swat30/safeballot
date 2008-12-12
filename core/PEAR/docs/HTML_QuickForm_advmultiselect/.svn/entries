@@ -1,0 +1,58 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/core/PEAR/docs/HTML_QuickForm_advmultiselect
+svn://svn.clientview.ca
+
+
+
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+ChangeLog
+file
+
+
+
+
+2008-08-21T17:15:09.000000Z
+a57dc9ff25c1c084068510648e81450d
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+docs
+dir
+
+NEWS
+file
+
+
+
+
+2008-08-21T17:15:09.000000Z
+b1b73cd227755457cd848e1ca0791993
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+examples
+dir
+

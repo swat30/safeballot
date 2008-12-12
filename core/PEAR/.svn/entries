@@ -1,0 +1,354 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/core/PEAR
+svn://svn.clientview.ca
+
+
+
+2008-07-23T02:37:04.904657Z
+6312
+chris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+HTTP
+dir
+
+Archive
+dir
+
+OS
+dir
+
+Mail
+dir
+
+Structures
+dir
+
+Net
+dir
+
+PEAR
+dir
+
+scripts
+dir
+
+docs
+dir
+
+Config.php
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+a664418fa43875d263b20e611e4edee2
+2008-02-25T21:13:56.203983Z
+4092
+mini
+
+.depdb
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+3b33f309a467d1f825eb9b282a547cb9
+2008-07-23T02:37:04.904657Z
+6312
+chris
+
+peclcmd.php
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+02fc6dca7edd7506a0574e7440aefdfc
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+pearcmd.php
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+ca304ad3403063bff643ee57762abdda
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+tests
+dir
+
+Console
+dir
+
+HTML
+dir
+
+template.spec
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+acd010e3bc43c0f72df584acde7b9158
+2008-01-23T01:29:29.528173Z
+3972
+mini
+
+Config
+dir
+
+.depdblock
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2008-02-25T22:52:37.639624Z
+4095
+mini
+
+package.dtd
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+ca444da9174e05f8a0dc71d8ee47900f
+2008-01-23T01:29:29.528173Z
+3972
+mini
+has-props
+
+INSTALL
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+671e6690634062ee521d2027a9971f22
+2008-01-23T01:29:29.528173Z
+3972
+mini
+
+data
+dir
+
+MDB2.php
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+344ead6e79757ce49d824d4d434450ad
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+System.php
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+43762dbc126b34e811326bacb76e8609
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+pearfrontendweb.php
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+6979a574f09f300f2936bec7f98ac818
+2008-02-25T21:13:56.203983Z
+4092
+mini
+
+Pager.php
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+2460b535ab0226d4abe0e7675b5d0b73
+2008-02-25T21:13:56.203983Z
+4092
+mini
+
+MDB2
+dir
+
+.registry
+dir
+
+Auth.php
+file
+
+
+
+
+2008-11-28T16:38:31.000000Z
+289fa024b2d1eda68b7b1b0c9f877493
+2008-04-10T00:41:24.600756Z
+4328
+chris
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+39321
+
+MIME
+dir
+
+.filemap
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+7fb7f3952de8cdbdf05c6365026ac8b2
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+README
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+ae70dd96347165e048bd37521d6437f2
+2008-01-23T01:29:29.528173Z
+3972
+mini
+
+index.php
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+8347ac1f0755050c6e001830612fa60a
+2008-02-26T02:36:04.569593Z
+4103
+mini
+
+Pager
+dir
+
+Auth
+dir
+
+SOAP
+dir
+
+.lock
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+d41d8cd98f00b204e9800998ecf8427e
+2008-02-25T22:52:37.639624Z
+4095
+mini
+
+Mail.php
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+c88fd26d346deab36f7599cc2e29dff8
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+.channels
+dir
+
+pear.conf
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+95f2ff53b0e2910a373e2fab2c805dd0
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+PEAR.php
+file
+
+
+
+
+2008-08-21T17:15:23.000000Z
+80921dfa70e0699a934c7d21f60b60c7
+2008-07-03T20:39:19.616486Z
+5908
+chris
+

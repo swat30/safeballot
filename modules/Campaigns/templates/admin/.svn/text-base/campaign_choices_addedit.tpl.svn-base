@@ -1,0 +1,19 @@
+<h3>Managing <i>{$campaign->getName()}</i> Voting Choices</h3>
+<form id="campaign_choices" action="/admin/Campaigns" method="POST">
+	<ul>
+		{assign var=choiceNum value=0}
+		{foreach from=$campaign->getChoices() item=choice}
+			{assign var=choiceNum value=$choiceNum+1}
+			<li>
+				<label for="choice[{$choice->getId()}]">Choice {$choiceNum}:</label> 
+				<input type="text" name="choice[{$choice->getId()}]" value="{$choice->getChoice()}" />
+				<a href="#" onclick="return !choiceDelete(this);"><image src="/images/admin/cancel.png" /></a>
+			</li>
+		{/foreach}
+		
+	</ul>
+	<div style="padding-top: 10px;"><a href="#" onclick="return !addChoice(this, 0);">Add New Choice</a></div>
+	<input type="hidden" name="section" value="questionedit" />
+	<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
+	<input type="submit" name="choices_submit" value="Update" />
+</form>

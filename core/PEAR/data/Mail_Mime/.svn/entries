@@ -1,0 +1,52 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/core/PEAR/data/Mail_Mime
+svn://svn.clientview.ca
+
+
+
+2008-02-25T21:13:56.203983Z
+4092
+mini
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+xmail.xsl
+file
+
+
+
+
+2008-08-21T17:15:18.000000Z
+61cea06fb6b4bd3a4b5e2d37384e14a9
+2008-02-25T21:13:56.203983Z
+4092
+mini
+
+xmail.dtd
+file
+
+
+
+
+2008-08-21T17:15:18.000000Z
+194810c478066eaeb28f51116b88e25a
+2008-02-25T21:13:56.203983Z
+4092
+mini
+

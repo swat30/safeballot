@@ -1,0 +1,52 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/modules/Menu/branches/1.2/include
+svn://svn.clientview.ca
+
+
+
+2008-07-31T12:16:32.397836Z
+6604
+jacob
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+MenuItem.php
+file
+
+
+
+
+2008-08-21T17:16:36.000000Z
+dc77ad12faa9b1b7d4fa15c9a4a5ffb7
+2008-07-25T19:06:14.474020Z
+6398
+jacob
+
+Menu.php
+file
+
+
+
+
+2008-08-21T17:16:36.000000Z
+2b20d7c4a4c67eb0d9cca815e15fa365
+2008-07-31T12:16:32.397836Z
+6604
+jacob
+

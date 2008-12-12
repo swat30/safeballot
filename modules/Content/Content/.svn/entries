@@ -1,0 +1,77 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/modules/Content/branches/1.2/Content
+svn://svn.clientview.ca
+
+
+
+2008-07-31T17:50:00.184280Z
+6659
+jacob
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+Content.php
+file
+
+
+
+
+2008-08-21T17:16:33.000000Z
+f05234c0e9072c1b626f212907519e7b
+2008-07-31T16:48:27.656976Z
+6649
+chris
+has-props
+
+include
+dir
+
+images
+dir
+
+AJAX_layers.php
+file
+
+
+
+
+2008-08-21T17:16:33.000000Z
+b69128e8419a089e1fd9b4ade3851a98
+2008-05-05T21:40:53.484996Z
+4875
+minichate
+
+js
+dir
+
+templates
+dir
+
+schema.sql
+file
+
+
+
+
+2008-08-21T17:16:33.000000Z
+a65e18050c23818cb4dd0ae5933ea9b1
+2008-07-31T17:50:00.184280Z
+6659
+jacob
+

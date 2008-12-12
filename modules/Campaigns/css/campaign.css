@@ -1,0 +1,29 @@
+ul#resultsList {
+	list-style: none;
+}
+
+ul#resultsSubList {
+	list-style: none;
+	padding-left: 20px;
+}
+
+li.choiceResult {
+	font-weight: bold;
+}
+
+li.optionResult {
+	font-weight: normal !important;	
+}
+
+ul.choice_holder { 
+
+}
+
+ul.option_holder {
+	padding-left: 20px;
+	list-style: circle;
+}
+
+li.option {
+	
+}

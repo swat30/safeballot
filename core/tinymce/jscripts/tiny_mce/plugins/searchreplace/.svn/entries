@@ -1,0 +1,75 @@
+9
+
+dir
+972
+https://tinymce.svn.sourceforge.net/svnroot/tinymce/tinymce/trunk/jscripts/tiny_mce/plugins/searchreplace
+https://tinymce.svn.sourceforge.net/svnroot/tinymce
+
+
+
+2008-09-09T15:47:17.364529Z
+922
+spocke
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4bc337fc-6b0f-0410-8579-f0892687066e
+
+editor_plugin.js
+file
+
+
+
+
+2008-08-21T17:16:17.000000Z
+3154c3cb319e9dd9c5994ae7125ad4f2
+2008-03-09T18:13:49.256931Z
+686
+spocke
+has-props
+
+langs
+dir
+
+editor_plugin_src.js
+file
+
+
+
+
+2008-08-21T17:16:17.000000Z
+9d4b57ec7ab94518353d3c681b5607cf
+2008-03-09T18:13:49.256931Z
+686
+spocke
+has-props
+
+css
+dir
+
+searchreplace.htm
+file
+
+
+
+
+2008-08-21T17:16:17.000000Z
+3f01ca6e65e6d50b3cfbe69b81be4579
+2008-04-07T15:58:06.503182Z
+771
+spocke
+
+js
+dir
+

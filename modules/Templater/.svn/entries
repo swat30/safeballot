@@ -1,0 +1,61 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/modules/Templater/branches/1.0
+svn://svn.clientview.ca
+
+
+
+2008-07-31T16:40:57.591818Z
+6645
+chris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+plugins
+dir
+
+tests
+dir
+
+include
+dir
+
+Templater.php
+file
+
+
+
+
+2008-08-21T17:16:53.000000Z
+d849f686220fa07759fcd937ec2efd26
+2008-07-31T16:40:57.591818Z
+6645
+chris
+
+images
+dir
+
+css
+dir
+
+js
+dir
+
+templates
+dir
+

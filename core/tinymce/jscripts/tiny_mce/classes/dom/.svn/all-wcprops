@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/tinymce/!svn/ver/967/tinymce/trunk/jscripts/tiny_mce/classes/dom
+END
+Selection.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/tinymce/!svn/ver/906/tinymce/trunk/jscripts/tiny_mce/classes/dom/Selection.js
+END
+Element.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svnroot/tinymce/!svn/ver/520/tinymce/trunk/jscripts/tiny_mce/classes/dom/Element.js
+END
+Serializer.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svnroot/tinymce/!svn/ver/952/tinymce/trunk/jscripts/tiny_mce/classes/dom/Serializer.js
+END
+ScriptLoader.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/tinymce/!svn/ver/956/tinymce/trunk/jscripts/tiny_mce/classes/dom/ScriptLoader.js
+END
+XMLWriter.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svnroot/tinymce/!svn/ver/906/tinymce/trunk/jscripts/tiny_mce/classes/dom/XMLWriter.js
+END
+DOMUtils.js
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svnroot/tinymce/!svn/ver/967/tinymce/trunk/jscripts/tiny_mce/classes/dom/DOMUtils.js
+END
+Sizzle.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svnroot/tinymce/!svn/ver/950/tinymce/trunk/jscripts/tiny_mce/classes/dom/Sizzle.js
+END
+Event.js
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svnroot/tinymce/!svn/ver/965/tinymce/trunk/jscripts/tiny_mce/classes/dom/Event.js
+END
+StringWriter.js
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svnroot/tinymce/!svn/ver/602/tinymce/trunk/jscripts/tiny_mce/classes/dom/StringWriter.js
+END

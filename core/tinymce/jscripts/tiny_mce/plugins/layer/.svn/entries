@@ -1,0 +1,54 @@
+9
+
+dir
+972
+https://tinymce.svn.sourceforge.net/svnroot/tinymce/tinymce/trunk/jscripts/tiny_mce/plugins/layer
+https://tinymce.svn.sourceforge.net/svnroot/tinymce
+
+
+
+2008-02-29T13:09:46.517735Z
+652
+spocke
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+4bc337fc-6b0f-0410-8579-f0892687066e
+
+editor_plugin.js
+file
+
+
+
+
+2008-08-21T17:16:13.000000Z
+67ea96e3d63b98215b64435bb9ea06d9
+2008-02-29T13:09:46.517735Z
+652
+spocke
+has-props
+
+editor_plugin_src.js
+file
+
+
+
+
+2008-08-21T17:16:13.000000Z
+90f4a2a1b4a144e5a99f24acf807c131
+2008-02-29T13:09:46.517735Z
+652
+spocke
+has-props
+

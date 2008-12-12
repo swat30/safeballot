@@ -1,0 +1,55 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/core/PEAR/docs/HTML_AJAX/examples/login
+svn://svn.clientview.ca
+
+
+
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+login.css
+file
+
+
+
+
+2008-08-21T17:15:10.000000Z
+bfb52a8179489b1191c958436d15e33d
+2008-02-25T21:13:56.203983Z
+4092
+mini
+
+php
+dir
+
+index.php
+file
+
+
+
+
+2008-08-21T17:15:10.000000Z
+0f7e70d918e397b577ddd2f1189bb635
+2008-02-25T21:13:56.203983Z
+4092
+mini
+

@@ -1,0 +1,55 @@
+9
+
+dir
+9542
+svn://svn.clientview.ca/norex2/branches/safeballot/core/PEAR/PEAR/Frontend
+svn://svn.clientview.ca
+
+
+
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+5e61c51c-0f3f-0410-a5f9-d792d8be48f0
+
+Web.php
+file
+
+
+
+
+2008-08-21T17:15:05.000000Z
+9562cf0fce632cbe9321d3472e4de2eb
+2008-02-25T22:44:40.259003Z
+4093
+mini
+
+Web
+dir
+
+CLI.php
+file
+
+
+
+
+2008-08-21T17:15:05.000000Z
+4d43b606e210a61e003fcea2a46d0fd4
+2008-07-03T20:39:19.616486Z
+5908
+chris
+
