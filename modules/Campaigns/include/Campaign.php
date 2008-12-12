@@ -429,10 +429,10 @@ class Campaign {
 						$body .= $authgroup." would like to invite you to vote on the following campaign: ";
 						$body .= $this->getName();
 						$body .= "\nVoting begins on ".$this->startDate." and ends on ".$this->endDate.". You will only be able to vote during this time period.";
-						$body .= "\n\nPlease goto the following link to vote: http://".$_SERVER['HTTP_HOST']."/Vote/".$recipient->getHash($this->getId());
-						$body .= "\nOr you may goto http://".$_SERVER['HTTP_HOST']."/Vote/ and enter '".$recipient->getHash($this->getId())."'.";
+						$body .= "\n\nPlease goto the following link to vote: https://www.safeballot.com/Vote/".$recipient->getHash($this->getId());
+						$body .= "\nOr you may goto https://www.safeballot.com/Vote/ and enter '".$recipient->getHash($this->getId())."'.";
 						$body .= "\n\nIf you have any questions please contact ".$authgroup." at ".$useremail;
-						if(!mail($recipient->getEmail(), 'Voting Campaign', $body, "From: Safeballot <safeballot@".$_SERVER['HTTP_HOST'].">\nReply-to: ".$authgroup." <".$useremail.">")){
+						if(!mail($recipient->getEmail(), 'Voting Campaign', $body, "From: Safeballot <safeballot@safeballot.com>\nReply-to: ".$authgroup." <".$useremail.">")){
 							$errCnt++;
 						}
 					}
