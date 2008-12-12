@@ -1,5 +1,5 @@
 <?php
-//if($_SERVER['HOSTNAME'] == 'woz.norex.ca' && $_SERVER['LOGNAME'] == 'safeballots'){
+if($_SERVER['LOGNAME'] == 'safeballots'){
 	set_include_path($_SERVER['PWD'] . '/httpdocs/');
 	date_default_timezone_set('America/Halifax');
 	include_once('core/Database.php');
@@ -38,6 +38,6 @@
 				break;
 		}
 	}
-//}
+}
 
 ?>
