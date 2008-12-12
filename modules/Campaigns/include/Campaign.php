@@ -146,6 +146,7 @@ class Campaign {
 	
 	public function calcStatus($int = false){
 		$today = date('U');
+		
 		if($today > strtotime($this->endDate)){
 			if($int){
 				return 0;
