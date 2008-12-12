@@ -474,6 +474,7 @@ class Campaign {
 			if((($voted && $result) || (!$voted && !$result))){
 				$retUsers[] = new CampaignUser($user['user_id']);
 			}
+			var_dump($retUsers);
 		}
 		
 		return $retUsers;
