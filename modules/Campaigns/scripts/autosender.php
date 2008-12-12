@@ -2,9 +2,10 @@
 //if($_SERVER['HOSTNAME'] == 'woz.norex.ca' && $_SERVER['LOGNAME'] == 'safeballots'){
 	ini_set('safe_mode', 'off');
 	$dir = '/var/www/vhosts/safeballot.com/httpdocs';
-	include($dir.'/core/Database.php');
-	include($dir.'/modules/Campaigns/include/Campaign.php');
-	include($dir.'/modules/Campaigns/include/CampaignUser.php');
+	set_include_path($_SERVER['PWD'] . '/httpdocs/');
+	include('../../../core/Database.php');
+	include('../include/Campaign.php');
+	include('../include/CampaignUser.php');
 	$sql = 'SELECT id FROM campaigns where autosend = 1';
 	if(@$argv[1] == 'debug'){
 		$debug = true;
