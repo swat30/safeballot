@@ -7,6 +7,7 @@ class Campaign {
 	protected $status = null;
 	protected $startDate = null;
 	protected $endDate = null;
+	protected $archived = null;
 	
 	public function __construct( $id = null ){
 		if(!is_null($id)){
@@ -20,6 +21,7 @@ class Campaign {
 			$this->startDate = $result['startDate'];
 			$this->endDate = $result['endDate'];
 			$this->status = $this->calcStatus();
+			$this->archived = $result['status'];
 		}
 	}
 	
@@ -51,6 +53,10 @@ class Campaign {
 		return $this->endDate;
 	}
 	
+	public function getArchiveStatus(){
+		return $this->archived;
+	}
+	
 	public function setId($id){
 		$this->id = $id;
 	}
@@ -79,6 +85,10 @@ class Campaign {
 		$this->endDate = $date;
 	}
 	
+	public function setArchiveStatus($status){
+		$this->archived = $status;
+	}
+	
 	public function save(){
 		if(!is_null($this->id)){
 			$sql = "UPDATE campaigns SET ";
@@ -100,6 +110,9 @@ class Campaign {
 		}
 		if(!is_null($this->endDate)){
 			$sql .= "endDate = \"".e($this->endDate)."\", ";
+		}
+		if(!is_null($this->archived)){
+			$sql .= "status = \"".e($this->archived)."\", ";
 		}
 		
 		if (!is_null($this->id)) {
@@ -230,9 +243,12 @@ class Campaign {
 		return $form;
 	}
 	
-	public static function getCampaigns($group){
+	public static function getCampaigns($group, $status){
 		$campaigns = array();
 		$sql = 'SELECT * FROM campaigns WHERE group_id="'.$group.'"';
+		if(!is_null($status)){
+			$sql .= ' AND status="'.$status.'"';
+		}
 		$results = Database::singleton()->query_fetch_all($sql);
 		$campaigns['upcoming'] = array();
 		$campaigns['progress'] = array();

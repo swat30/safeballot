@@ -20,36 +20,29 @@
 				<form action="/admin/Campaigns" method="post" style="float: left;">
 					<input type="hidden" name="section" value="addedit" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
-					<input type="image" src="/images/admin/pencil.gif" />
+					<input type="image" src="/images/admin/pencil.gif" title="Edit" />
 				</form>
 				<form action="/admin/Campaigns" method="post" style="float: left;" onsubmit="return !thickboxAddEdit(this)">
 					<input type="hidden" name="section" value="questionedit" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
-					<input type="image" src="/images/admin/tab_edit.png" />
+					<input type="image" src="/images/admin/tab_edit.png" title="Edit questions" />
 				</form>
 				<form action="/admin/Campaigns" method="post" style="float: left;" onsubmit="return !thickboxAddEdit(this)">
 					<input type="hidden" name="section" value="votesend" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
-					<input type="image" src="/images/admin/email_go.png" />
+					<input type="image" src="/images/admin/email_go.png" title="Invite user list to vote" />
 				</form>
 				{if $user->hasPerm('generatereciplist')}
 				<form action="/admin/Campaigns" method="post" style="float: left;">
 					<input type="hidden" name="section" value="voteprint" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
-					<input type="image" src="/images/admin/printer.png" />
+					<input type="image" src="/images/admin/printer.png" title="Generate hash PDF" />
 				</form>
 				{/if}
-				{*
-				<form action="/admin/Campaigns" method="post" style="float: left;">
-					<input type="hidden" name="section" value="reciplist" />
-					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
-					<input type="image" src="/images/admin/group_edit.png" />
-				</form>
-				*}
 				<form method="POST" action="/admin/Campaigns" onsubmit="return deleteConfirm({$campaign->getId()})">
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 					<input type="hidden" name="section" value="campaigndelete" />
-					<input type="image" name="delete" id="delete" value="delete" src="/images/admin/cross.gif" />
+					<input type="image" name="delete" id="delete" value="delete" src="/images/admin/cross.gif" title="Delete campaign" />
 				</form>
 			</td>
 		</tr>
@@ -73,13 +66,13 @@
 				<form action="/admin/Campaigns" method="post" style="float: left;" onsubmit="return !thickboxAddEdit(this);">
 					<input type="hidden" name="section" value="votesend" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
-					<input type="image" src="/images/admin/email_go.png" />
+					<input type="image" src="/images/admin/email_go.png" title="Send voting reminder to user list" />
 				</form>
 				{if $user->hasPerm('generatereciplist')}
 				<form action="/admin/Campaigns" method="post" style="float: left;">
 					<input type="hidden" name="section" value="voteprint" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
-					<input type="image" src="/images/admin/printer.png" />
+					<input type="image" src="/images/admin/printer.png" title="Generate hash PDF" />
 				</form>
 				{/if}
 			</td>
@@ -104,17 +97,22 @@
 				<form action="/admin/Campaigns" method="post" style="float: left;">
 					<input type="hidden" name="section" value="viewresults" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
-					<input type="image" src="/images/admin/page_white_magnify.png" />
+					<input type="image" src="/images/admin/page_white_magnify.png" title="View results" />
 				</form>
 				<form action="/admin/Campaigns" method="post" style="float: left;" onsubmit="return !thickboxAddEdit(this);">
 					<input type="hidden" name="section" value="resultsend" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
-					<input type="image" src="/images/admin/page_white_go.png" />
+					<input type="image" src="/images/admin/page_white_go.png" title="Send results to user list" />
 				</form>
 				<form action="/admin/Campaigns" method="post" style="float: left;">
 					<input type="hidden" name="section" value="whovoted" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
-					<input type="image" src="/images/admin/user_comment.png" />
+					<input type="image" src="/images/admin/user_comment.png" title="Check individual voting status" />
+				</form>
+				<form action="/admin/Campaigns" method="post" style="float: left;">
+					<input type="hidden" name="section" value="archivecampaign" />
+					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
+					<input type="image" src="/images/admin/folder_table.png" title="Archive" />
 				</form>
 			</td>
 		</tr>

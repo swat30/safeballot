@@ -185,7 +185,7 @@ class Module_Campaigns extends Module {
 	
 	public function topLevelAdmin(){
 		if($this->user->hasPerm('viewcampaign')){
-			$campaigns = Campaign::getCampaigns($this->user->getAuthGroup());
+			$campaigns = Campaign::getCampaigns($this->user->getAuthGroup(), 0);
 			$this->smarty->assign('campaigns', $campaigns);
 			$this->smarty->assign('user', $this->user);
 			return $this->smarty->fetch( 'admin/campaigns.tpl' );
