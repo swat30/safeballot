@@ -4,8 +4,8 @@
 	$dir = '/var/www/vhosts/safeballot.com/httpdocs';
 	set_include_path($_SERVER['PWD'] . '/httpdocs/');
 	include('core/Database.php');
-	include('modules/Campaign/include/Campaign.php');
-	include('modules/Campaign/include/CampaignUser.php');
+	include('modules/Campaigns/include/Campaign.php');
+	include('modules/Campaigns/include/CampaignUser.php');
 	$sql = 'SELECT id FROM campaigns where autosend = 1';
 	if(@$argv[1] == 'debug'){
 		$debug = true;
