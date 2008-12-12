@@ -10,6 +10,7 @@
 		$debug = true;
 	}
 	$results = Database::singleton()->query_fetch_all($sql);
+	var_dump($results);
 	foreach($results as &$campaign){
 		$campaign = new Campaign($campaign['id']);
 		switch ($campaign->calcStatus(true)){
