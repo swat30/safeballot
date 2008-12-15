@@ -8,7 +8,7 @@
  * @version 2.0
  */
 
-if($_SERVER['HTTPS'] != 'on' || $_SERVER['HTTP_HOST'] != 'www.safeballot.com'){
+if(($_SERVER['HTTPS'] != 'on' || $_SERVER['HTTP_HOST'] != 'www.safeballot.com') && $_SERVER['SERVER_ADDR'] != '127.0.1.1'){
 	header("Location: https://www.safeballot.com".$_SERVER['REQUEST_URI']);
 }
 
