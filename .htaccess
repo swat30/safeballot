@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteCond %{HTTPS} off
+RewriteCond %{HTTPS} off [N]
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L,QSA]
 
 RewriteCond %{HTTPS_HOST} safeballot\.com [NC]
