@@ -1,9 +1,9 @@
 RewriteEngine On
 
-RewriteCond %{HTTP_HOST} ^safeballot\.com
+RewriteCond %{HTTP_HOST} ^safeballot\.com$
 RewriteRule ^(.*)$ https://www.safeballot.com/ [R=permanent,L,C,QSA] 
 
-RewriteCond %{HTTPS_HOST} ^safeballot\.com
+RewriteCond %{HTTPS_HOST} ^safeballot\.com$
 RewriteRule ^(.*)$ https://www.safeballot.com/ [R=permanent,L,C,QSA] 
 
 RewriteCond %{HTTPS} off
