@@ -10,6 +10,10 @@
  * @version 2.0
  */
 
+if($_SERVER['HTTPS'] != 'on' || $_SERVER['HTTP_HOST'] != 'www.safeballot.com'){
+	header("Location: https://www.safeballot.com".$_SERVER['REQUEST_URI']);
+}
+
 /**
  * Require the site initialization file
  */
