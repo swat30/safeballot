@@ -4,8 +4,8 @@ RewriteEngine On
 #RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,N,QSA]
 
 RewriteCond %{HTTPS_HOST} ^safeballot\.com [NC,OR]
-RewriteCond %{HTTP_HOST} ^safeballot\.com [NC}
-RewriteRule ^(.*)$ https://www.safeballot.com/$1 [R=301,L,QSA] 
+RewriteCond %{HTTP_HOST} ^safeballot\.com [NC]
+RewriteRule ^(.*)$ https://www.safeballot.com/$1 [R=301,N,QSA] 
 
 #RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*\.)(js|css)$ /js/jscsscomp.php?q=$1$2 [L,NC]
