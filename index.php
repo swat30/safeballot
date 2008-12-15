@@ -8,12 +8,14 @@
  * @version 2.0
  */
 
+if($_SERVER['HTTPS'] != 'on' || $_SERVER['HTTP_HOST'] != 'www.safeballot.com'){
+	header("Location: https://www.safeballot.com".$_SERVER['REQUEST_URI']);
+}
+
 /*
  * Kicks things off with initiliziation of the general framework infrastructure.
  */
 include_once 'include/Site.php';
-
-var_dump($_SERVER);
 
 error_reporting(E_ALL);
 
