@@ -1,5 +1,7 @@
 RewriteEngine On
 
+RewriteRule !(www\..*$) www.%{HTTP_HOST}%{REQUEST_URI}
+
 RewriteCond %{HTTPS} off
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
