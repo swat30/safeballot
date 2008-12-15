@@ -461,7 +461,7 @@ class Campaign {
 							}
 						}
 						
-						if(!mail($recipient->getEmail(), 'Voting Campaign Results', $body, "From: safeballot@".$_SERVER['HTTP_HOST'])){
+						if(!mail($recipient->getEmail(), 'Voting Campaign Results', $body, "From: Safeballot <safeballot@safeballot.com>")){
 							$errCnt++;
 						}
 					}
