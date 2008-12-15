@@ -1,6 +1,8 @@
 RewriteEngine On
 
-Redirect /$ https://safeballot.com/$1
+RewriteCond %{HTTP_HOST}   !^safeballot\.com [NC]
+RewriteCond %{HTTP_HOST}   !^$
+RewriteRule ^/(.*)         https://www.safeballot.com/$1 [L,R]
 
 #RewriteCond %{HTTP_HOST} ^safeballot\.com
 #RewriteRule ^(.*)$ https://www.safeballot.com/$1 [NC,R,L,QSA]
