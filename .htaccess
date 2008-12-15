@@ -1,6 +1,6 @@
 RewriteEngine On
 
-RewriteCond %{HTTP_HOST} ^safeballot\.com [C]
+RewriteCond %{HTTP_HOST} ^safeballot\.com [OR]
 RewriteCond %{HTTPS_HOST} ^safeballot\.com
 RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [R=permanent,L,C] 
 
