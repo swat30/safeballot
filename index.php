@@ -13,6 +13,8 @@
  */
 include_once 'include/Site.php';
 
+var_dump($_SERVER);
+
 error_reporting(E_ALL);
 
 /*
