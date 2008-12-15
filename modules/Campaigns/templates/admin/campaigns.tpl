@@ -1,10 +1,13 @@
-<h3>Manage <i>{$user->getAuthGroupName()}</i> Campaigns (<a href="/admin/Campaigns&section=reciplist">Manage Users</a>)</h3>
-
-{if $user->hasPerm('addcampaign')}
-<div style="float: right;">
-		<a href="/admin/Campaigns&section=addedit" title="Create New Campaign">Create Campaign</a>
-	</div>
-{/if}
+<h3>Manage <i>{$user->getAuthGroupName()}</i> Campaigns</h3>
+<div id="header">
+	<ul id="primary" class="plain">
+	{if $user->hasPerm('addcampaign')}
+		<li><a href="/admin/Campaigns&section=addedit" title="Create New Campaign">Create Campaign</a></li>
+	{/if}
+		<li><a href="/admin/Campaigns&section=viewarchive" title="View Campaign Archives">View Archive</a></li>
+		<li><a href="/admin/Campaigns&section=reciplist">Manage Users</a></li>
+	</ul>
+</div>
 
 <table border="0" cellspacing="0" cellpadding="0" class="adminList" style="clear: both; float: left; padding-bottom: 5px;">
 	<tr>

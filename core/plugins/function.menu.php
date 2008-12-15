@@ -55,7 +55,7 @@ function adminMenu($params, &$smarty) {
 				//} else {
 				//	array_unshift($adminItems, '<li><a href="/admin/?module=' . $module['module'] . '">' . strtolower($module['module']) . '</a></li>');
 				//}
-				if ($i != count($activeModules)) {
+				if (($i != count($activeModules) && $module['module'] != 'Campaigns') || ($module['module'] == 'Campaigns' && $i < 1)) {
 					$liClass = ' class="borderRight"';
 				} else {
 					unset($liClass);
@@ -83,6 +83,7 @@ function companyMenu($params, &$smarty) {
 	$menuString = '<ul>';
 	$menuString .= '<li class="borderRight"><a href="/admin/Campaigns">CAMPAIGNS</a></li>';
 	$menuString .= '<li class="boarderRight" id="in">- <a href="/admin/Campaigns&section=addedit">Add Campaign</a></li>';
+	$menuString .= '<li class="boarderRight" id="in">- <a href="/admin/Campaigns&section=viewarchive">View Campaign Archive</a></li>';
 	$menuString .= '<li class="borderRight"><a href="/admin/Campaigns&section=reciplist">USERS</a></li>';
 	$menuString .= '<li class="boarderRight" id="in">- <a href="/admin/Campaigns&section=recipaddedit" rel="facebox">Add User</a></li>';
 	$menuString .= '<li class="boarderRight" id="in">- <a href="/admin/Campaigns&section=recipcsvup">Upload User CSV</a></li>';

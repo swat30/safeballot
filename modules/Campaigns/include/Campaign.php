@@ -269,11 +269,14 @@ class Campaign {
 		return $form;
 	}
 	
-	public static function getCampaigns($group, $status){
+	public static function getCampaigns($group, $status = null, $order = null){
 		$campaigns = array();
 		$sql = 'SELECT * FROM campaigns WHERE group_id="'.$group.'"';
 		if(!is_null($status)){
 			$sql .= ' AND status="'.$status.'"';
+		}
+		if(!is_null($order)){
+			$sql .= ' ORDER BY '.$order;
 		}
 		$results = Database::singleton()->query_fetch_all($sql);
 		$campaigns['upcoming'] = array();

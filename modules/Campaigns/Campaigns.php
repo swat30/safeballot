@@ -10,6 +10,7 @@ class Module_Campaigns extends Module {
 					$campaign = new Campaign(@$_REQUEST['campaign_id']);
 					$form = $campaign->getAddEditForm();
 					$this->smarty->assign('form', $form);
+					$this->smarty->assign('status', $campaign->getId());
 					if ($form->validate() && $form->isSubmitted() && isset($_REQUEST['submit'])) {
 						return $this->topLevelAdmin();
 					}
@@ -180,6 +181,14 @@ class Module_Campaigns extends Module {
 					$campaign = new Campaign($_REQUEST['campaign_id']);
 					$campaign->setArchiveStatus(1);
 					$campaign->save();
+				}
+				return $this->topLevelAdmin();
+			case 'viewarchive':
+				if($this->user->hasPerm('viewcampaign')){
+					$campaigns = Campaign::getCampaigns($this->user->getAuthGroup(), 1, 'endDate ASC');
+					$this->smarty->assign('campaigns', $campaigns);
+					$this->smarty->assign('company', $this->user->getAuthGroupName());
+					return $this->smarty->fetch('admin/campaign_archive.tpl');
 				}
 				return $this->topLevelAdmin();
 			default:

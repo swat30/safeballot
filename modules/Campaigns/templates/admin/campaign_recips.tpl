@@ -1,4 +1,4 @@
-<h3>Manage <i>{$user->getAuthGroupName()}</i> Recipients (<a href="/admin/Campaigns" title="Back">Back</a>)</h3>
+<h3>Manage <i>{$user->getAuthGroupName()}</i> Recipients (<a href="/admin/Campaigns" title="Back">Go Back</a>)</h3>
 
 <div style="float: left;">
 	

@@ -16,7 +16,8 @@ var updateEvents = function() {
 		}
 	);
 			
-	$$('div#header ul#primary').invoke('observe', 'click', thickboxAddEdit.bindAsEventListener(thickboxAddEdit));
+	//$$('div#header ul#primary').invoke('observe', 'click', thickboxAddEdit.bindAsEventListener(thickboxAddEdit));
+	$$('div#header ul#primary:not(ul.plain) li:not(li.plain)').invoke('observe', 'click', thickboxAddEdit.bindAsEventListener(thickboxAddEdit));
 }
 
 Event.observe(window, 'load', updateEvents);
