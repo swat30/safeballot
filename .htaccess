@@ -1,6 +1,7 @@
 RewriteEngine On
 
-RewriteRule !(www\.(.$)) https://www.%{HTTP_HOST}%{REQUEST_URI} [R,NC]
+RewriteCond %{HTTP_HOST} safeballot.com$ [NC]
+RewriteRule (.*) https://www.%{HTTP_HOST}%{REQUEST_URI} [R,NC]
 
 RewriteCond %{HTTPS} off
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
@@ -27,7 +28,6 @@ RewriteRule ^support/? /index.php?module=Support&page=$1 [NC,L]
 
 RewriteRule ^store/([A-Za-z]+)/?(.*)?$ /index.php?module=Cart&page=$2&section=$1 [NC,L]
 RewriteRule ^store/(.*)? /index.php?module=Cart&section=$1 [NC,L]
-
 
 RewriteRule ^blog/(.*)? /index.php?module=Blog&page=$1 [NC,L]
 RewriteRule ^gallery/(.*)? /index.php?module=Gallery&page=$1 [NC,L]
