@@ -3,7 +3,7 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,QSA]
 
-RewriteRule ^(.*)$ https://www.safeballot.com/$1 [QSA] 
+RewriteRule ^(.safeballot\.com)$ https://www.safeballot.com/$1 [QSA] 
 
 #RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*\.)(js|css)$ /js/jscsscomp.php?q=$1$2 [L,NC]
