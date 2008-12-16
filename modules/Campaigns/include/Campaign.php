@@ -460,7 +460,7 @@ class Campaign {
 							$body.= "\n\t- ".$choice->getChoice();
 							$options = $this->sortVotes($choice->getId());
 							foreach($options as $option){
-								$body .= "\n\t\t- ".$option->getChoice().": ".($option->getVotes()/$this->getVoteCount())."%";
+								$body .= "\n\t\t- ".$option->getChoice().": ".(100)*($option->getVotes()/$this->getVoteCount())."%";
 							}
 						}
 						
