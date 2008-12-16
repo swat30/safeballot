@@ -43,6 +43,7 @@ if ($auth->checkAuth()) {
 		echo Module::factory($requestedModule, $smarty)->getAdminInterface();
 		die();
 	} else {
+		$smarty->assign ( 'isAdmin', $_SESSION['authenticated_user']->hasPerm('admin'));
 		if (!isset($_REQUEST['module'])) {
 			$requestedModule = 'Dashboard';
 			$smarty->assign ( 'module', $requestedModule );

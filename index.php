@@ -54,4 +54,6 @@ if ( $ajaxHelper->isAJAX () ){
 	}
 	$smarty->render ( 'db:site.tpl' );
 }
+
+Config::setModuleOptions('CMS', array('name'=>'Safeballot', 'defaultPage'=>'Home', 'defaultPageTitle'=>'Safeballot'));
 ?>

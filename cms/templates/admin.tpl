@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 {assign var=cms value=$config->getModuleOptions()}
-<title>{$cms.name} - Website Management</title>
+<title>{$cms.name} - {if $isAdmin}Website{else}Campaign{/if} Management</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
 <link rel="stylesheet" href="/css/admin.css,/css/admin_menu.css,/css/admin_tabs.css,/css/tablesorter.css{foreach from=$css item=cssUrl},{$cssUrl}{/foreach}" type="text/css"/>
@@ -25,7 +25,7 @@
 	<div id="content">
 		<div id="contentTopTd"></div>
 		<div id="contentTd">
-			<h2><span style="color:#000;">norex://</span> {$module_title}</h2>
+			<h2><span style="color:#000;">norex://safeballot/</span> {$module_title}</h2>
 			<div id="messages"></div>
 			<div id="module_content">{module class=$module admin=true}</div>
 		</div>
@@ -33,8 +33,7 @@
 	</div>
 	
 	<div id="footer">
-		<p>&copy; 2007 by <a href="http://www.norex.ca" title="Norex Core Web Development">Norex Core Web Development</a></p>
-		<p>Codename Beeblebrox</p>
+		<p>&copy; 2008 by <a href="http://www.norex.ca" title="Norex Core Web Development">Norex Core Web Development</a></p>
 	</div>
 
 </div>

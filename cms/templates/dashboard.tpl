@@ -12,5 +12,9 @@ additional tools such as print and other media forms play important supporting r
 </div>
 {else}*}
 <div class="dashboard">
+{if $isAdmin}
+{menu admin=true}
+{else}
 {menu company=true}
+{/if}
 </div>
