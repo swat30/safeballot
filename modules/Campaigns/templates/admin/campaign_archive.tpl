@@ -21,7 +21,7 @@
 				<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 				<input type="image" src="/images/admin/page_white_go.png" title="Send results to user list" />
 			</form>
-			<form action="/admin/Campaigns" method="post" style="float: left;">
+			<form action="/admin/Campaigns" method="post" style="float: left;" onsubmit="return !thickboxAddEdit(this);">
 				<input type="hidden" name="section" value="whovoted" />
 				<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 				<input type="image" src="/images/admin/user_comment.png" title="Check individual voting status" />
