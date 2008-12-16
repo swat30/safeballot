@@ -59,7 +59,7 @@ function array_flatten($array, $preserve_keys = 1, &$newArray = Array()) {
 	return $newArray;
 }
 
-function authHTML() {
+function authHTML($data, $status, $obj = null) {
 	global $smarty;
 	 $smarty->template_dir = SITE_ROOT . '/templates';
 	 $smarty->compile_dir = SITE_ROOT . '/templates_c';
@@ -72,6 +72,11 @@ function authHTML() {
 	if(isset($modules[0]['module'])){
 		$smarty->assign('activemodule', $modules[0]['module']);
 	}
+	
+	if(!is_null($obj)){
+		$smarty->assign('authErr', $obj->getError());
+	}
+	
 	$smarty->assign('module', 'User');
 	$content = $smarty->fetch('login.tpl');
 	$smarty->content['User'] = $content;

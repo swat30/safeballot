@@ -14,13 +14,15 @@ if(($_SERVER['HTTPS'] != 'on' || $_SERVER['HTTP_HOST'] != 'www.safeballot.com') 
 	header("Location: https://www.safeballot.com".$_SERVER['REQUEST_URI']);
 }
 
+header("p3p: CP=\"ALL DSP COR PSAa PSDa OUR NOR ONL UNI COM NAV\"");
+
 /**
  * Require the site initialization file
  */
 
 require_once (dirname(__FILE__) . "/../include/Site.php");
 $auth_container = new CMSAuthContainer();
-$auth = new Auth($auth_container, null, 'authHTML');
+$auth = new CMSAuth($auth_container, null, 'authHTML');
 $auth->start();
 
 if ($auth->checkAuth()) {
@@ -67,5 +69,5 @@ if ($auth->checkAuth()) {
 		$smarty->render('admin.tpl');
 	}
 }
-
+	
 ?>
