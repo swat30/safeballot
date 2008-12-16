@@ -14,7 +14,14 @@ var addChoice = function(link) {
 	
 	var input = Builder.node('input', { type: 'text', name: 'nChoice['+(cur)+'][main]', style: 'background-color: yellow;' });
 	var label = Builder.node('label', { htmlFor: 'nChoice['+(cur)+']'}, 'Category '+(pchoiceNum)+": ");
-	var newLi = Builder.node('li', [label, input]);
+	var subUl = Builder.node('ul', {class: 'option_holder'});
+	var subLi = Builder.node('li');
+	var subDiv = Builder.node('div', {style: 'padding-bottom: 10px;'});
+	var subHref = Builder.node('a', {href: '#', onclick: 'return !addOption(this);'}, 'Add New Choice');
+	subDiv.appendChild(subHref);
+	subLi.appendChild(subDiv);
+	subUl.appendChild(subLi);
+	var newLi = Builder.node('li', [label, input, subUl]);
 	ul.appendChild(newLi);
 
 	return true;
@@ -28,8 +35,8 @@ var addOption = function(link) {
 	parent = ul.previous('input').readAttribute('name').sub(/\[main\]/, '');
 	
 	if(ul.select('li').size()-1 > 0){
-		var lastEl = ul.immediateDescendants('li').last().previous().down('input');
-		lastEl.readAttribute('name').scan(/[0-9]+/, function(match){ poptionNum = (parseInt(match[0]) + 1)});
+		var lastLabel = ul.immediateDescendants('li').last().previous().down('label');
+		lastLabel.innerHTML.scan(/[0-9]+/, function(match){ poptionNum = (parseInt(match[0]) + 1)});
 	} else {
 		poptionNum = 1;
 	}
@@ -37,7 +44,8 @@ var addOption = function(link) {
 	
 	var input = Builder.node('input', { type: 'text', name: (parent)+'[new]['+(cur)+']', style: 'background-color: yellow;' });
 	input.addClassName('option');
-	var newLi = Builder.node('li', [input]);
+	var label = Builder.node('label', { htmlFor: (parent)+'[new]['+(cur)+']'}, 'Choice '+(poptionNum)+": ");
+	var newLi = Builder.node('li', [label,input]);
 	ul.insertBefore(newLi, bottomHolder);
 	
 	return true;
@@ -63,9 +71,20 @@ var choiceDelete = function(element) {
 
 var optionDelete = function(element) {
 	var disInput = element.up('li').down('input');
+	var disLabel = element.up('li').down('label');
+	var choiceNum;
+	disLabel.innerHTML.scan(/[0-9]+/, function(match){ optionNum = match[0] });
+	var desc = element.up('ul').childElements();
 	
 	element.up('li').toggle();
 	disInput.value = null;
+	optionNum = 1;
+	desc.without(desc.last()).each(function(item) {
+		if(item.getStyle('display') != 'none'){
+			item.down('label').innerHTML = 'Choice '+optionNum+': ';
+			optionNum++;
+		}
+	});
 }
 
 var updateEndDate = function(element) {

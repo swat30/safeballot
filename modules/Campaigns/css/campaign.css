@@ -21,9 +21,16 @@ ul.choice_holder {
 
 ul.option_holder {
 	padding-left: 20px;
-	list-style: circle;
 }
 
 li.option {
 	
+}
+
+ul.userVoteList {
+	list-style: none;
+}
+
+ul.userVoteList li {
+	padding-left: 20px;
 }
