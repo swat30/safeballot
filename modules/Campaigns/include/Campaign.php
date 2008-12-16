@@ -458,7 +458,7 @@ class Campaign {
 						
 						foreach($choices as $choice){
 							$body.= "\n\t- ".$choice->getChoice();
-							$options = $this->getChoices($choice->getId());
+							$options = $this->sortVotes($choice->getId());
 							foreach($options as $option){
 								$body .= "\n\t\t- ".$option->getChoice().": ".$option->getVotes();
 							}

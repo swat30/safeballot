@@ -5,7 +5,7 @@
 		{foreach from=$campaign->getChoices() item=choice}
 			{assign var=choiceNum value=$choiceNum+1}
 			<li>
-				<label for="choice[{$choice->getId()}][main]">Choice {$choiceNum}:</label> 
+				<label for="choice[{$choice->getId()}][main]">Category {$choiceNum}:</label> 
 				<input type="text" name="choice[{$choice->getId()}][main]" value="{$choice->getChoice()}" />
 				<a href="#" onclick="return !choiceDelete(this);"><image src="/images/admin/cancel.png" /></a>
 				<ul class="option_holder">
@@ -16,14 +16,14 @@
 					</li>
 				{/foreach}
 					<li>
-						<div style="padding-bottom: 10px;"><a href="#" onclick="return !addOption(this);">Add New Option</a></div>
+						<div style="padding-bottom: 10px;"><a href="#" onclick="return !addOption(this);">Add New Choice</a></div>
 					</li>
 				</ul>
 			</li>
 		{/foreach}
 		
 	</ul>
-	<div style="padding-top: 10px;"><a href="#" onclick="return !addChoice(this);">Add New Choice</a></div>
+	<div style="padding-top: 10px;"><a href="#" onclick="return !addChoice(this);">Add New Category</a></div>
 	<input type="hidden" name="section" value="questionedit" />
 	<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 	<input type="submit" name="choices_submit" value="Update" />

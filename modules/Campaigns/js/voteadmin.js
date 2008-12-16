@@ -13,7 +13,7 @@ var addChoice = function(link) {
 	cur++;
 	
 	var input = Builder.node('input', { type: 'text', name: 'nChoice['+(cur)+'][main]', style: 'background-color: yellow;' });
-	var label = Builder.node('label', { htmlFor: 'nChoice['+(cur)+']'}, 'Choice '+(pchoiceNum)+": ");
+	var label = Builder.node('label', { htmlFor: 'nChoice['+(cur)+']'}, 'Category '+(pchoiceNum)+": ");
 	var newLi = Builder.node('li', [label, input]);
 	ul.appendChild(newLi);
 
@@ -55,7 +55,7 @@ var choiceDelete = function(element) {
 	choiceNum = 1;
 	desc.each(function(item) {
 		if(item.getStyle('display') != 'none'){
-			item.down('label').innerHTML = 'Choice '+choiceNum+': ';
+			item.down('label').innerHTML = 'Category '+choiceNum+': ';
 			choiceNum++;
 		}
 	});
