@@ -2,7 +2,7 @@
 class Module_Campaigns extends Module {
 
 	function getAdminInterface() {
-		//$this->addJS('/modules/Campaigns/js/voteadmin.js');
+		$this->addJS('/modules/Campaigns/js/voteadmin.js');
 		$this->addCSS('/modules/Campaigns/css/campaign.css');
 		switch(@$_REQUEST['section']){
 			case 'addedit':
