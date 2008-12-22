@@ -9,7 +9,7 @@
 	</ul>
 </div>
 
-<table border="0" cellspacing="0" cellpadding="0" class="adminList" style="clear: both; float: left; padding-bottom: 5px;">
+<table border="0" cellspacing="0" cellpadding="0" class="adminList" style="clear: both; padding-bottom: 5px;">
 	<tr>
 		<th valign="center">Upcoming Campaigns</th>
 		<th valign="center" style="width: 200px">Status</th>
@@ -88,6 +88,7 @@
 </table>
 <table border="0" cellspacing="0" cellpadding="0" class="adminList" style="clear: both; float: left;">
 	<tr>
+		<th valign="center">Completed Campaigns</th>
 		<th valign="center">Completed Campaigns</th>
 		<th valign="center" style="width: 200px">Status</th>
 		<th valign="center" style="width: 150px">Actions ***</th> 
