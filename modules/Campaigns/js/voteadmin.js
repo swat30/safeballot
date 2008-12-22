@@ -20,8 +20,8 @@ var addChoice = function(link) {
 	alert('label');
 	var subUl = Builder.node('ul');
 	alert('subUl');
-	subUl.addClassName('option_holder');
-	alert('Added class');
+	//subUl.addClassName('option_holder');
+	//alert('Added class');
 	var subLi = Builder.node('li');
 	alert('subLi');
 	var subDiv = Builder.node('div', {style: 'padding-bottom: 10px;'});
