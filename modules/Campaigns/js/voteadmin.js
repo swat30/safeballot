@@ -1,6 +1,7 @@
 var cur = 0;
 
 var addChoice = function(link) {
+	alert(link);
 	var ul = $(link).up('form').down('ul.choice_holder');
 	var pchoiceNum;
 	
