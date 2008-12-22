@@ -55,7 +55,7 @@
 		</tr>
 	{/foreach}
 </table>
-<table border="0" cellspacing="0" cellpadding="0" class="adminList" style="clear: both; float: left; padding-bottom: 5px;">
+<table border="0" cellspacing="0" cellpadding="0" class="adminList" style="clear: both; padding-bottom: 5px;">
 	<tr>
 		<th valign="center">Campaigns in Progress</th>
 		<th valign="center" style="width: 250px">Status</th>
@@ -86,9 +86,8 @@
 		</tr>
 	{/foreach}
 </table>
-<table border="0" cellspacing="0" cellpadding="0" class="adminList" style="clear: both; float: left;">
+<table border="0" cellspacing="0" cellpadding="0" class="adminList" style="clear: both;">
 	<tr>
-		<th valign="center">Completed Campaigns</th>
 		<th valign="center">Completed Campaigns</th>
 		<th valign="center" style="width: 200px">Status</th>
 		<th valign="center" style="width: 150px">Actions ***</th> 
