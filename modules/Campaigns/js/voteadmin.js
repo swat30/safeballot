@@ -1,7 +1,6 @@
 var cur = 0;
 
 var addChoice = function(link) {
-	alert(link);
 	var ul = $(link).up('form').down('ul.choice_holder');
 	var pchoiceNum;
 	
@@ -25,6 +24,7 @@ var addChoice = function(link) {
 	subUl.appendChild(subLi);
 	var newLi = Builder.node('li', [label, input, subUl]);
 	ul.appendChild(newLi);
+	alert(newLi);
 
 	return true;
 }
