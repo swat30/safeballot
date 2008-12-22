@@ -19,6 +19,7 @@ var addChoice = function(link) {
 	var label = Builder.node('label', { htmlFor: 'nChoice['+(cur)+']'}, 'Category '+(pchoiceNum)+": ");
 	alert('label');
 	var subUl = Builder.node('ul');
+	$(subUl);
 	alert('subUl');
 	subUl.addClassName("option_holder");
 	alert('Added class');
