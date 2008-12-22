@@ -55,7 +55,7 @@
 		</tr>
 	{/foreach}
 </table>
-<table border="0" cellspacing="0" cellpadding="0" class="adminList" style="clear: both; padding-bottom: 5px; padding-top: 5px;">
+<table border="0" cellspacing="0" cellpadding="0" class="adminList" style="clear: both; padding-bottom: 5px; padding-top: 5px; margin-bottom: 5px;">
 	<tr>
 		<th valign="center">Campaigns in Progress</th>
 		<th valign="center" style="width: 250px">Status</th>
