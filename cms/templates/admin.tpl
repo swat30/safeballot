@@ -25,6 +25,7 @@ var addChoice = function(link) {
 	cur++;
 	
 	var input = Builder.node('input', { type: 'text', name: 'nChoice['+(cur)+'][main]', style: 'background-color: yellow;' });
+	var test = 'sdf';
 	var label = Builder.node('label', { htmlFor: 'nChoice['+(cur)+']'}, 'Category '+(pchoiceNum)+": ");
 	var subUl = Builder.node('ul', {class: 'option_holder'});
 	var subLi = Builder.node('li');
