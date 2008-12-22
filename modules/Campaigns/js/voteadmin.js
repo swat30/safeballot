@@ -15,18 +15,25 @@ var addChoice = function(link) {
 	alert('Top');
 	
 	var input = Builder.node('input', { type: 'text', name: 'nChoice['+(cur)+'][main]', style: 'background-color: yellow;' });
-	alert(input);
+	alert('input');
 	var label = Builder.node('label', { htmlFor: 'nChoice['+(cur)+']'}, 'Category '+(pchoiceNum)+": ");
+	alert('label');
 	var subUl = Builder.node('ul');
+	alert('subUl');
 	subUl.addClassName('option_holder');
 	var subLi = Builder.node('li');
+	alert('subLi');
 	var subDiv = Builder.node('div', {style: 'padding-bottom: 10px;'});
 	var subHref = Builder.node('a', {href: '#', onclick: 'return !addOption(this);'}, 'Add New Choice');
+	alert('subHref');
 	subDiv.appendChild(subHref);
 	subLi.appendChild(subDiv);
 	subUl.appendChild(subLi);
+	alert('Appended children');
 	var newLi = Builder.node('li', [label, input, subUl]);
+	alert('newLi');
 	ul.appendChild(newLi);
+	alert('Final append');
 	
 	return true;
 }
