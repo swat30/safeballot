@@ -13,6 +13,7 @@
 	position: absolute;
 	bottom: 0px;
 	width: 45em; /* a width is required for Opera, older Mozilla browsers, and Konqueror browsers */
+	clear: both;
 }
 
 #header ul#primary li  {
