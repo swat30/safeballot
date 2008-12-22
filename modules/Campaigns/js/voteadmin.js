@@ -1,8 +1,8 @@
 var cur = 0;
 
 var addChoice = function(link) {
+	alert(link);
 	var ul = $(link).up('form').down('ul.choice_holder');
-	alert(ul);
 	var pchoiceNum;
 	
 	if(ul.select('li').size() > 0){
