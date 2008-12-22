@@ -40,7 +40,7 @@ var addChoice = function(link) {
 	ul.appendChild(newLi);
 
 	return true;
-}
+};
 
 var addOption = function(link) {
 	var ul = $(link).up('ul.option_holder');
