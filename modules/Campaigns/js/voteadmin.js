@@ -1,5 +1,5 @@
 var cur = 0;
-alert('asdf');
+
 var addChoice = function(link) {
 	var ul = $(link).up('form').down('ul.choice_holder');
 	var pchoiceNum;
@@ -14,7 +14,8 @@ var addChoice = function(link) {
 	
 	var input = Builder.node('input', { type: 'text', name: 'nChoice['+(cur)+'][main]', style: 'background-color: yellow;' });
 	var label = Builder.node('label', { htmlFor: 'nChoice['+(cur)+']'}, 'Category '+(pchoiceNum)+": ");
-	var subUl = Builder.node('ul', {class: 'option_holder'});
+	var subUl = Builder.node('ul');
+	subUl.addClassName('option_holder');
 	var subLi = Builder.node('li');
 	var subDiv = Builder.node('div', {style: 'padding-bottom: 10px;'});
 	var subHref = Builder.node('a', {href: '#', onclick: 'return !addOption(this);'}, 'Add New Choice');
