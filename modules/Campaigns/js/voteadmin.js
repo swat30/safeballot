@@ -12,7 +12,10 @@ var addChoice = function(link) {
 	}
 	cur++;
 	
+	alert('Top');
+	
 	var input = Builder.node('input', { type: 'text', name: 'nChoice['+(cur)+'][main]', style: 'background-color: yellow;' });
+	alert(input);
 	var label = Builder.node('label', { htmlFor: 'nChoice['+(cur)+']'}, 'Category '+(pchoiceNum)+": ");
 	var subUl = Builder.node('ul');
 	subUl.addClassName('option_holder');
@@ -25,8 +28,6 @@ var addChoice = function(link) {
 	var newLi = Builder.node('li', [label, input, subUl]);
 	ul.appendChild(newLi);
 	
-	alert('sdafsadf');
-
 	return true;
 }
 
