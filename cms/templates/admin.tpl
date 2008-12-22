@@ -12,6 +12,8 @@
 <script type="text/javascript" src="/core/tinymce/jscripts/tiny_mce/tiny_mce.js"></script>
 {literal}
 <script type="text/javascript">
+var cur = 0;
+
 var addChoice = function(link) {
 	var ul = $(link).up('form').down('ul.choice_holder');
 	var pchoiceNum;
@@ -38,8 +40,6 @@ var addChoice = function(link) {
 
 	return true;
 }
-
-alert('asd');
 
 var addOption = function(link) {
 	var ul = $(link).up('ul.option_holder');
