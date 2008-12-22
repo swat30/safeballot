@@ -12,30 +12,19 @@ var addChoice = function(link) {
 	}
 	cur++;
 	
-	alert('Top');
-	
 	var input = Builder.node('input', { type: 'text', name: 'nChoice['+(cur)+'][main]', style: 'background-color: yellow;' });
-	alert('input');
 	var label = Builder.node('label', { htmlFor: 'nChoice['+(cur)+']'}, 'Category '+(pchoiceNum)+": ");
-	alert('label');
 	var subUl = Builder.node('ul');
 	$(subUl);
-	alert('subUl');
 	subUl.addClassName("option_holder");
-	alert('Added class');
 	var subLi = Builder.node('li');
-	alert('subLi');
 	var subDiv = Builder.node('div', {style: 'padding-bottom: 10px;'});
 	var subHref = Builder.node('a', {href: '#', onclick: 'return !addOption(this);'}, 'Add New Choice');
-	alert('subHref');
 	subDiv.appendChild(subHref);
 	subLi.appendChild(subDiv);
 	subUl.appendChild(subLi);
-	alert('Appended children');
 	var newLi = Builder.node('li', [label, input, subUl]);
-	alert('newLi');
 	ul.appendChild(newLi);
-	alert('Final append');
 	
 	return true;
 }
@@ -56,6 +45,7 @@ var addOption = function(link) {
 	cur++;
 	
 	var input = Builder.node('input', { type: 'text', name: (parent)+'[new]['+(cur)+']', style: 'background-color: yellow;' });
+	$(input);
 	input.addClassName('option');
 	var label = Builder.node('label', { htmlFor: (parent)+'[new]['+(cur)+']'}, 'Choice '+(poptionNum)+": ");
 	var newLi = Builder.node('li', [label,input]);
