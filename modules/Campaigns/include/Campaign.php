@@ -255,15 +255,17 @@ class Campaign {
 		$form->addRule(array( 'start_date', 'end_date'), 'Please make sure that the event has a positive length and that it begins after the current date/time', 'validDate');
 		$form->addRule('name', 'Please enter a campaign name', 'required');
 		
-		if($form->validate() && $form->isSubmitted() && isset($_POST['submit'])){
-			$this->setName($form->exportValue('name'));
-			$this->setGroup($_SESSION['authenticated_user']->getAuthGroup());
-			$this->setDescription($form->exportValue('description'));
-			$this->setStartDate($this->formatDate($form->exportValue('start_date')));
-			$this->setEndDate($this->formatDate($form->exportValue('end_date')));
-			$this->setStatus($this->calcStatus());
-			$this->setAutoSend($form->exportValue('auto_send'));
-			$this->save();
+		if($form->isSubmitted() && isset($_POST['submit'])){
+			if($form->validate()){
+				$this->setName($form->exportValue('name'));
+				$this->setGroup($_SESSION['authenticated_user']->getAuthGroup());
+				$this->setDescription($form->exportValue('description'));
+				$this->setStartDate($this->formatDate($form->exportValue('start_date')));
+				$this->setEndDate($this->formatDate($form->exportValue('end_date')));
+				$this->setStatus($this->calcStatus());
+				$this->setAutoSend($form->exportValue('auto_send'));
+				$this->save();
+			}
 		}
 		
 		return $form;

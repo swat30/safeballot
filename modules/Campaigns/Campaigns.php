@@ -11,8 +11,8 @@ class Module_Campaigns extends Module {
 					$form = $campaign->getAddEditForm();
 					$this->smarty->assign('form', $form);
 					$this->smarty->assign('status', $campaign->getId());
-					if ($form->validate() && $form->isSubmitted() && isset($_REQUEST['submit'])) {
-						return $this->topLevelAdmin();
+					if ($form->isSubmitted() && isset($_REQUEST['submit'])) {
+						if($form->validate()) return $this->topLevelAdmin();
 					}
 					return $this->smarty->fetch( 'admin/campaigns_addedit.tpl' );
 				}
@@ -90,8 +90,8 @@ class Module_Campaigns extends Module {
 					}
 					$form = $recipient->getAddEditForm();
 					$this->smarty->assign('form', $form);
-					if ($form->validate() && $form->isSubmitted() && isset($_REQUEST['submit'])) {
-						return $this->recipTopLevelAdmin();
+					if ($form->isSubmitted() && isset($_REQUEST['submit'])) {
+						if($form->validate()) return $this->recipTopLevelAdmin();
 					}
 					return $this->smarty->fetch('admin/campaign_recips_addedit.tpl');
 				}

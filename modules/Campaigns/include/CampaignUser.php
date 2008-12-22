@@ -126,11 +126,13 @@ class CampaignUser {
 			$form->setDefaults( $defaultValues );
 		}
 		
-		if($form->validate() && $form->isSubmitted() && isset($_POST['submit'])){
-			$this->name = $form->exportValue('name');
-			$this->email = $form->exportValue('email');
+		if($form->isSubmitted() && isset($_POST['submit'])){
+			if($form->validate()){
+				$this->name = $form->exportValue('name');
+				$this->email = $form->exportValue('email');
 			
-			$this->save();
+				$this->save();
+			}
 		}
 		
 		return $form;
