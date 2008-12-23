@@ -73,6 +73,8 @@ var choiceDelete = function(element) {
 }
 
 var optionDelete = function(element) {
+	alert('in');
+	$(element);
 	var disInput = element.up('li').down('input');
 	var disLabel = element.up('li').down('label');
 	var choiceNum;
