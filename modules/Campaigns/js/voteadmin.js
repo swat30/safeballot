@@ -55,6 +55,7 @@ var addOption = function(link) {
 }
 
 var choiceDelete = function(element) {
+	$(element);
 	var disInput = element.up('li').down('input');
 	var disLabel = element.up('li').down('label');
 	var choiceNum;
@@ -73,22 +74,15 @@ var choiceDelete = function(element) {
 }
 
 var optionDelete = function(element) {
-	alert('in');
 	$(element);
 	var disInput = element.up('li').down('input');
 	var disLabel = element.up('li').down('label');
 	var choiceNum;
 	
-	alert('Vars assigned');
-	
 	disLabel.innerHTML.scan(/[0-9]+/, function(match){ optionNum = match[0] });
 	var desc = element.up('ul').childElements();
 	
-	alert('Label scanned and children set');
-	
 	element.up('li').toggle();
-	
-	alert('li toggled');
 	
 	disInput.value = null;
 	optionNum = 1;
@@ -97,7 +91,6 @@ var optionDelete = function(element) {
 			item.down('label').innerHTML = 'Choice '+optionNum+': ';
 			optionNum++;
 		}
-	alert('labels set');
 	});
 }
 
