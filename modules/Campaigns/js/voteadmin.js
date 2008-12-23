@@ -63,7 +63,7 @@ var choiceDelete = function(element) {
 	var desc = element.up('ul').childElements();
 	
 	element.up('li').toggle();
-	disInput.value = null;
+	disInput.value = "";
 	choiceNum = 1;
 	desc.each(function(item) {
 		if(item.getStyle('display') != 'none'){
@@ -84,7 +84,7 @@ var optionDelete = function(element) {
 	
 	element.up('li').toggle();
 	
-	disInput.value = null;
+	disInput.value = "";
 	optionNum = 1;
 	desc.without(desc.last()).each(function(item) {
 		if(item.getStyle('display') != 'none'){
