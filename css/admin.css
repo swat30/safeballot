@@ -143,11 +143,56 @@ font-weight: normal;
 letter-spacing: 0.035em;
 }
 
-p.dashboard {
+/*p.dashboard {
 	color: #555;
 	line-height: 140%;
 	text-align: justify;
+}*/
+
+/*DASHBOARD*/
+
+div.dashboard ul { 
+	list-style-type: none; 
+	margin: 20px 0 0 0px;
+	padding: 0;
+} 
+
+div.dashboard  ul li {
+	font-size: 26px;
+	color: #FF5800;
+	font-family: trebuchet ms,arial,tahoma,verdana,sans-serif;
+	font-weight: normal;
+	letter-spacing: 0.035em;
+	background-image: url(/images/admin/module_bullet.png);
+	background-repeat: no-repeat;
+	background-position: 0 0.1em;
+	padding-left: 35px;
+	padding-bottom: 25px;
 }
+
+div.dashboard ul li.borderRight a {
+font-size:21px;
+font-weight:700;
+}
+ 
+div.dashboard ul li.borderRight a:hover {
+text-decoration:none;
+color:#666;
+}
+
+div.dashboard ul li#in.boarderRight a {
+font-size:16px;
+}
+
+div.dashboard ul li#in {
+       font-size: 18px;
+       margin-left: 35px;
+       background-image: none;
+}
+
+       
+/*END DASHBOARD*/
+
 
 #contentTd h3 {
 	font-size: 12px;
@@ -922,26 +967,6 @@ div.element textarea {
 }
 
 */
-
-
-div.dashboard ul { 
-	list-style-type: none; 
-	margin: 20px 0 0 0px;
-	padding: 0;
-} 
-
-div.dashboard  ul li {
-	font-size: 26px;
-	color: #FF5800;
-	font-family: trebuchet ms,arial,tahoma,verdana,sans-serif;
-font-weight: normal;
-letter-spacing: 0.035em;
-background-image: url(/images/admin/module_bullet.png);
-background-repeat: no-repeat;
-background-position: 0 0.1em;
-padding-left: 35px;
-padding-bottom: 25px;
-}
 
 .roundcont {
 	width: 100%;
