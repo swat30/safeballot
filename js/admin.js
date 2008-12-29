@@ -136,13 +136,14 @@ var NorexUI = Class.create(Facebox, {
 				  		Event.stop(event);
 				 	});
 				} else {
+					alert('in success');
 					ui.updateContent(transport.responseText);
 				}
 			},
 			onComplete: function(transport) {
 				if (!transport.responseText.match(/class="error/)) {
 					new Message({message: 'Item was updated successfully'});
-					
+					alert('In complete');
 					ui.close();
 				} else {
 					new Message({type: 'error', message: 'Not all fields were filled in'});
