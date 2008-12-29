@@ -94,23 +94,3 @@ var optionDelete = function(element) {
 	});
 }
 
-var updateEndDate = function(element) {
-	var startEl = element.getElementsBySelector('option');
-	var num;
-	var elPart = element.readAttribute('name').sub("start_date", "");
-	var endEl = $$('[name="end_date'+elPart+'"]')['0'].getElementsBySelector('option');
-	
-	startEl.each(function(el) {
-		if (el.selected) {
-			num = el.value;
-		}
-	});
-	
-	endEl.each(function(el) {
-		if (el.readAttribute('value') == num){
-			el.selected=true;
-		} else if (el.selected) {
-			el.selected=false;
-		}
-	});
-}
