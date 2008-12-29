@@ -142,7 +142,7 @@ var NorexUI = Class.create(Facebox, {
 			onComplete: function(transport) {
 				if (!transport.responseText.match(/class="error/)) {
 					new Message({message: 'Item was updated successfully'});
-					alert('In complete');
+					
 					ui.close();
 				} else {
 					new Message({type: 'error', message: 'Not all fields were filled in'});
@@ -209,8 +209,7 @@ function initRTE(mode, theme, name, stylesheet, bodyId, bodyClass) {
 	    body_class : bodyClass,
 	    plugin_insertdate_timeFormat : "%H:%M:%S",
 		file_browser_callback : "norexFileBrowser",
-		theme_advanced_resize_horizontal : false,		return $(form).request( {
-		
+		theme_advanced_resize_horizontal : false,
 		theme_advanced_resizing : true,
 		apply_source_formatting : true,
 		spellchecker_languages : "+English=en,Danish=da,Dutch=nl,Finnish=fi,French=fr,German=de,Italian=it,Polish=pl,Portuguese=pt,Spanish=es,Swedish=sv",

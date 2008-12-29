@@ -34,7 +34,6 @@ class Module_Campaigns extends Module {
 				return $this->smarty->fetch('admin/campaign_recips_addedit.tpl');
 			case 'questionedit':
 				if($this->user->hasPerm('addcampaign')){
-					$this->addJS('/modules/Campaigns/js/choice.js');
 					$campaign = new Campaign($_REQUEST['campaign_id']);
 					$this->smarty->assign('campaign', $campaign);
 					if(isset($_REQUEST['choices_submit'])){
