@@ -24,7 +24,7 @@
 			<td>{$recipient->getEmail()}</td>
 			<td>
 			{if $user->hasPerm('addcampaign')}
-				<form action="/admin/Campaigns" method="post" style="float: left;" onsubmit="return !thickboxAddEdit(this);">
+				<form action="/admin/Campaigns" method="post" style="float: left;" class="norexui_addedit">
 					<input type="hidden" name="section" value="recipaddedit" />
 					<input type="hidden" name="recipient_id" value="{$recipient->getId()}" />
 					<input type="image" src="/images/admin/user_edit.png" />

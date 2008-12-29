@@ -25,12 +25,12 @@
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 					<input type="image" src="/images/admin/pencil.gif" title="Edit" />
 				</form>
-				<form action="/admin/Campaigns" method="post" style="float: left;" onsubmit="return !thickboxAddEdit(this)">
+				<form action="/admin/Campaigns" method="post" style="float: left;" class="norexui_addedit">
 					<input type="hidden" name="section" value="questionedit" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 					<input type="image" src="/images/admin/tab_edit.png" title="Edit questions" />
 				</form>
-				<form action="/admin/Campaigns" method="post" style="float: left;" onsubmit="return !thickboxAddEdit(this)">
+				<form action="/admin/Campaigns" method="post" style="float: left;" class="norexui_addedit">
 					<input type="hidden" name="section" value="votesend" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 					<input type="image" src="/images/admin/email_go.png" title="Invite user list to vote" />
@@ -66,7 +66,7 @@
 			<td>{$campaign->getName()}</td>
 			<td>{$campaign->getStatus()}</td>
 			<td>
-				<form action="/admin/Campaigns" method="post" style="float: left;" onsubmit="return !thickboxAddEdit(this);">
+				<form action="/admin/Campaigns" method="post" style="float: left;" class="norexui_addedit">
 					<input type="hidden" name="section" value="votesend" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 					<input type="image" src="/images/admin/email_go.png" title="Send voting reminder to user list" />
@@ -97,17 +97,17 @@
 			<td>{$campaign->getName()}</td>
 			<td>{$campaign->getStatus()}</td>
 			<td>
-				<form action="/admin/Campaigns" method="post" style="float: left;" onsubmit="return !thickboxAddEdit(this);">
+				<form action="/admin/Campaigns" method="post" style="float: left;" class="norexui_addedit">
 					<input type="hidden" name="section" value="viewresults" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 					<input type="image" src="/images/admin/page_white_magnify.png" title="View results" />
 				</form>
-				<form action="/admin/Campaigns" method="post" style="float: left;" onsubmit="return !thickboxAddEdit(this);">
+				<form action="/admin/Campaigns" method="post" style="float: left;" class="norexui_addedit">
 					<input type="hidden" name="section" value="resultsend" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 					<input type="image" src="/images/admin/page_white_go.png" title="Send results to user list" />
 				</form>
-				<form action="/admin/Campaigns" method="post" style="float: left;" onsubmit="return !thickboxAddEdit(this);">
+				<form action="/admin/Campaigns" method="post" style="float: left;" class="norexui_addedit">
 					<input type="hidden" name="section" value="whovoted" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 					<input type="image" src="/images/admin/user_comment.png" title="Check individual voting status" />

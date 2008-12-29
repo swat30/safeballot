@@ -5,7 +5,7 @@ var Facebox = Class.create({
 			close_image		: '/images/closelabel.gif',
 			image_types		: new RegExp('\.' + ['png', 'jpg', 'jpeg', 'gif'].join('|') + '$', 'i'),
 			inited				: true,	
-			facebox_html	: '<div id="facebox" style="display:none;"><div class="popup"><table><tbody><tr><td class="tl"/><td class="b"/><td class="tr"/></tr><tr><td class="b"/><td class="body"><div class="content"></div><div class="footer"><a href="#" class="close"><img src="/images/closelabel.gif" title="close" class="close_image" /></a></div></td><td class="b"/></tr><tr><td class="bl"/><td class="b"/><td class="br"/></tr></tbody></table></div></div>'
+			facebox_html	: '<div id="overlay" style="display: none;">&nbsp;</div><div id="facebox" style="display:none;"><div class="popup"><table><tbody><tr><td class="tl"/><td class="b t"/><td class="tr"/></tr><tr><td class="b l"/><td class="body"><div class="content"></div><div class="footer"><a href="#" class="close"><img src="/images/closelabel.gif" title="close" class="close_image" /></a></div></td><td class="b r"/></tr><tr><td class="bl"/><td class="b"/><td class="br"/></tr></tbody></table></div></div>'
 		};
 		if (extra_set) Object.extend(this.settings, extra_set);
 		
@@ -70,10 +70,18 @@ var Facebox = Class.create({
 			'left': pageScroll.left + ((document.viewport.getWidth() - $('facebox').getWidth()) / 2) + 'px'
 		}); */
 		
-		Event.observe(document, 'keypress', this.keyPressListener);
+		//Event.observe(document, 'keypress', this.keyPressListener);
 	},
 	
 	reveal	: function(data, klass){
+		new Effect.Appear($('facebox'), {duration: 0.2, fps: 100});
+		
+		$('overlay').setStyle({height: $$('html')[0].getHeight() + 'px'});
+		if (!$('overlay').visible()) {
+			$('overlay').observe('click', function() { facebox.close(); });
+			new Effect.Appear($('overlay'), {duration: 1.0, fps: 100, from: 0.0, to: 0.8});
+		}
+		
 		contentWrapper = $$('#facebox .content').first();
 		if (klass) contentWrapper.addClassName(klass);
 		contentWrapper.insert({bottom: data});
@@ -82,11 +90,11 @@ var Facebox = Class.create({
 		$$('#facebox .body').first().childElements().each(function(elem,i){
 			elem.show();
 		});
-		Event.observe(document, 'keypress', this.keyPressListener);
+		//Event.observe(document, 'keypress', this.keyPressListener);
 		
 		var pageScroll = document.viewport.getScrollOffsets();
 		$('facebox').setStyle({
-			'top': pageScroll.top + ((document.viewport.getHeight() - $('facebox').getHeight()) / 2) + 'px',
+			'top': pageScroll.top + 50 + 'px',
 			'left': pageScroll.left + ((document.viewport.getWidth() - $('facebox').getWidth()) / 2) + 'px'
 		});
 	},
@@ -95,6 +103,7 @@ var Facebox = Class.create({
 		//$('facebox').hide();
 		contentWrapper = $$('#facebox .content').first();
 		new Effect.Fade($('facebox'), {duration: 0.2, fps: 100});
+		new Effect.Fade($('overlay'), {duration: 1.0, fps: 100});
 		//contentWrapper.update('');
 	},
 	

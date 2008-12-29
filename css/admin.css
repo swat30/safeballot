@@ -3,6 +3,10 @@
 	padding: 0;
 }
 
+html {
+	height: 100%;
+}
+
 body {
 	font-family: Arial, Helvetica, bold;
 	font-size: 11px;
@@ -206,6 +210,68 @@ a img {
 	border: 0;
 }
 
+div#subnav {
+	float: right; margin: 0 0 10px 10px;
+}
+
+
+
+ul, li{margin:0; border:0; padding:0; list-style:none;}
+
+#middlebar .menu li {
+background:url(lm.png) left top no-repeat;
+height:30px;
+float:left;
+margin-right:10px;
+}
+#middlebar .menu li a{
+text-decoration:none;
+display:block;
+float:left;
+background:url(rm.png) right top no-repeat;
+}
+#middlebar .menu li a:hover{
+color:#666666;
+}
+
+
+#middlebar ul .submenu {
+border:solid 1px #c9dea1;
+border-top:none;
+background:#FFFFFF;
+position: absolute;
+margin-top: 14px;
+padding:6px 0;
+clear:both;
+width: 200px;
+z-index:2;
+}
+#middlebar ul .submenu li{
+background:none;
+display:block;
+clear: both;
+float:none;
+margin:0 6px;
+border:0;
+height:auto;
+line-height:normal;
+border-top:solid 1px #DEDEDE;
+}
+#middlebar .submenu li a{
+background:none;
+display:block;
+float:none;
+padding:6px 6px;
+margin:0;
+border:0;
+height:auto;
+color:#105cbe;
+line-height:normal;
+}
+#middlebar .submenu li a:hover{
+background:#e3edef;
+}
+
 /*Table Stylings*/
 table.adminList {
 	font-size: 12px;
@@ -218,16 +284,15 @@ table.adminList th {
 	color: #FFF;
 	padding: 3px;
 	border-bottom: 1px solid #FFF;
-	border-right: 1px solid #FFF;
 }
 
 table.adminList th.borderLeft {
-	border-left: 1px solid #FFF;
+
 }
 
 table.adminList td {
 	padding: 3px;
-	border-right: 1px solid #FFF;
+
 	text-align: left;
 }
 
@@ -246,11 +311,13 @@ table.adminList td.actions a {
 }
 
 table.adminList tr.row1 {
-	background: #FFBF9C;
+	/* background: #FFBF9C; */
+	background-image: url(/images/admin/row1.png);
 }
 
 table.adminList tr.row2 {
-	background: #FFE1D0;
+	/* background: #FFE1D0; */
+	background-image: url(/images/admin/row2.png);
 }
 
 table.adminList td.legend {
@@ -410,6 +477,33 @@ ul.ltr li input {
 /*Messages Styling*/
 .messagesList li {
 	width: 100% !important;
+}
+
+div#messages {
+	position: absolute;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #444;
+}
+
+div.success {
+	text-align: center;
+	padding: 0.6em 2em 0.6em 75px;
+	margin: 1em 0 1em 0;
+	border-top: 2px solid green;
+	border-bottom: 2px solid green;
+	background-color: #b3efb3;
+}
+
+div.error {
+	text-align: center;
+	padding: 0.6em 2em 0.6em 75px;
+	margin: 1em 0 1em 0;
+	border-top: 2px solid #ffd324;
+	border-bottom: 2px solid #ffd324;
+	background-color: #ffdaca;
 }
 
 .notice {
@@ -783,6 +877,7 @@ color: #fff;
 }
 
 
+
 form fieldset.hidden ol {
 list-style-type:none;
 padding:10px 0 0 0;
@@ -800,6 +895,7 @@ font-size:12px;
 form label.element {
 font-size:12px;
 float:left;
+clear: both;
 font-weight:700;
 width:115px;
 text-align:left;
@@ -811,6 +907,11 @@ div.element {
 padding:7px 0 7px 0;
 text-align:left;
 }
+
+div#facebox form table.mceLayout {
+clear: both;
+}
+
 /*
 div.element input, div.element textarea {
 	width: 350px;
@@ -842,17 +943,17 @@ padding-left: 35px;
 padding-bottom: 25px;
 }
 
-div.dashboard ul li#in {
-	font-size: 18px;
-	margin-left: 35px;
-	background-image: none;
-}
-
 .roundcont {
 	width: 100%;
 	background-color: #ff5800;
 	color: #fff;
+	clear: both;
 	margin: 25px 0 0 0;
+}
+
+.roundcont div.interior {
+	margin: 0 20px 0 20px;
+	padding: 0;
 }
 
 .roundcont p {
@@ -873,6 +974,7 @@ div.dashboard ul li#in {
 
 .roundbottom {
 	background: url(/images/admin/noAsset_br.png) no-repeat top right; 
+	clear: both;
 }
 
 img.corner {
@@ -882,23 +984,3 @@ img.corner {
    display: block !important;
 }
 
-/*DASHBOARD*/
-
-div.dashboard ul li.borderRight a {
-font-size:21px;
-font-weight:700;
-}
-
-div.dashboard ul li.borderRight a:hover {
-text-decoration:none;
-color:#666;
-}
-
-div.dashboard ul li#in.boarderRight a {
-font-size:16px;
-}
-
-/*END DASHBOARD*/
-form#campaign_choices ul li{
-	list-style-type: none;
-}

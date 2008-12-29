@@ -1,35 +1,10 @@
-var strings = {
-		deleteItem: new Template("Are you sure you want to delete this #{type}? Deleting it will also remove all sub-items")
-	};
+// Deprecated Code --- Use
+//		class="norexui_delete"
+//		class="norexui_addedit"
+//      rather than deleteConfirm
 
-var updateEvents = function() {
-	$$('table.adminList tr.row1').invoke('observe', 'click', 
-		function(event) { 
-			var row = event.element().up('tr');
-			new Effect.Highlight(row, {duration:1.5, startcolor: '#ffff99', endcolor: '#FFBF9C', restorecolor: '#ffbf9c'});
-		}
-	);
-	$$('table.adminList tr.row2').invoke('observe', 'click', 
-		function(event) { 
-			var row = event.element().up('tr');
-			new Effect.Highlight(row, {duration:1.5, startcolor: '#ffff99', endcolor: '#FFE1D0', restorecolor: '#FFE1D0'});
-		}
-	);
-			
-	//$$('div#header ul#primary').invoke('observe', 'click', thickboxAddEdit.bindAsEventListener(thickboxAddEdit));
-	$$('div#header ul#primary:not(ul.plain) li:not(li.plain)').invoke('observe', 'click', thickboxAddEdit.bindAsEventListener(thickboxAddEdit));
-}
-
-Event.observe(window, 'load', updateEvents);
-
-function updateModuleContent(content) {
-	$('module_content').update(content);
-	
-	updateEvents();
-}
-
-function deleteConfirm(form, itemType) {
-	if (confirm(strings.deleteItem.evaluate({type: itemType}))) {
+function deleteConfirm(form) {
+	if (confirm("Delete?")) {
 		new Effect.Fade(form.up('tr'), {
 			duration: 0.5
 		});
@@ -38,77 +13,180 @@ function deleteConfirm(form, itemType) {
 	return true;
 }
 
-function formSubmit(form) {
-	return $(form).request( {
-		onSuccess: function(transport) {
-			if (transport.responseText.match(/class="error/)) {
-				var displaybox = $('facebox'); 
-				displaybox.update(transport.responseText);
-				var form = displaybox.down('form');
-				$(form).observe('submit', function(event){
-			  		formSubmit(form);
-			  		Event.stop(event);
-			 	});
-			} else {
-				updateModuleContent(transport.responseText);
+////////////////////////////////////////////////
+var Message = Class.create({
+  type: 'success',
+  message: '',
+  delay: 8,
+
+  classnames: ['success', 'error', 'warning'],
+  
+  initialize: function(options) {
+    if (options.type) this.type = options.type;
+    if (options.message) this.message = options.message;
+    this._show();
+  },
+  
+  _getClass: function() {
+	  if (this.type == 'success') return this.classnames[0];
+	  if (this.type == 'error') return this.classnames[1];
+	  if (this.type == 'warning') return this.classnames[2];
+  },
+  
+  _getTitle: function() {
+	  if (this.type == 'success') return 'Success';
+	  if (this.type == 'error') return 'Error';
+	  if (this.type == 'warning') return 'Warning';
+  },
+  
+  _show: function() {
+	  var msg = Builder.node('div', {'class': this._getClass(), height: '40px'}, Builder.node('div', {}, this.message)).hide();
+	  $('messages').insert({top:msg});
+	  new Effect.Appear(msg, {fps: 100});
+	  new Effect.Fade(msg, {duration: 1.0, delay: this.delay, 
+		afterFinish: function() {
+		  msg.remove();
+	  	}
+	  });
+  }
+});
+
+var NorexUI = Class.create(Facebox, {
+	
+	initialize: function($super) {
+		$super();
+		this.updateEvents();
+	},
+	
+	updateEvents: function() {
+		$$('table.adminList tr.row1').invoke('observe', 'click', 
+			function(event) { 
+				var row = event.element().up('tr');
+				new Effect.Highlight(row, {duration:1.5, startcolor: '#ffff99', endcolor: '#FFBF9C', restorecolor: '#ffbf9c'});
 			}
-		},
-		onComplete: function(transport) {
-			if (!transport.responseText.match(/class="error/)) {
-				new Effect.Fade($('facebox'), {duration: 0.2, fps: 100});
+		);
+		$$('table.adminList tr.row2').invoke('observe', 'click', 
+			function(event) { 
+				var row = event.element().up('tr');
+				new Effect.Highlight(row, {duration:1.5, startcolor: '#ffff99', endcolor: '#FFE1D0', restorecolor: '#FFE1D0'});
 			}
+		);
+		
+		$$('form.norexui_addedit').invoke('observe', 'submit', this.addedit);
+		$$('form.norexui_delete').invoke('observe', 'submit', this.deleteConfirm);
+		$$('li.norexui_delete').invoke('observe', 'click', this.deleteConfirm);
+		
+		$$('div#header ul#primary:not(ul.plain) li:not(li.plain)').invoke('observe', 'click', this.addedit);
+
+		// To make a sortable admin list, use <tbody id="foo" class="sortable">
+		// A PhP template looks like:
+		// case 'sort':
+		//	foreach (getSerializedRequest() as $i => $j) {
+		//		$item = new Foo($j);
+		//		$item->setSort($i);
+		//		$item->save();
+		//	}
+
+		$$('tbody.sortable').each(function (e) {
+				id = e.identify();
+				Sortable.create(id, {
+					tag: 'tr',
+							onUpdate: function() {
+							new Ajax.Request ("/admin/Property", {
+								method: "post",
+										parameters: { action: 'sort', data: Sortable.serialize(id) }
+								});
+						}
+					});
+			}
+		);
+	},
+	
+	addedit: function(event) {
+		var form = Event.element(event);
+		if (form.href) {
+			form = Builder.node('form', {action: form.href, method: 'post'});
 		}
-	});
-	
-	return true;
-}
-
-var thickboxAddEdit = function(element) {
-	if (!element.nodeType) {
-		Event.stop(element);
-		// Element is bound event listener to an <a href> link
-		return new Ajax.Request(Event.element(element).href, {
-			method: 'get',
+		var r = $(form).request({
 			onSuccess: function(transport) {
-				showThickBox(transport);
-			}, 
+				ui.loading();
+				ui.reveal(transport.responseText);
+				ui.updateEvents();
+				if (form = $('facebox').down('form')) {
+					Event.observe(form, 'submit', function(event) {
+				  		ui.formSubmit(form);
+				  		event.stop();
+				 	});
+			 	}
+			}
+		});
+		
+		if (r) event.stop();
+	},
+	
+	formSubmit: function(form) {
+		return $(form).request( {
+			onSuccess: function(transport) {
+				if (transport.responseText.match(/class="error/)) {
+					var displaybox = $$('div#facebox div.content')[0]; 
+					displaybox.down('.content').update(transport.responseText); 
+					var form = displaybox.down('form');
+					$(form).observe('submit', function(event){
+				  		ui.formSubmit(form);
+				  		Event.stop(event);
+				 	});
+				} else {
+					ui.updateContent(transport.responseText);
+				}
+			},
 			onComplete: function(transport) {
-				
+				if (!transport.responseText.match(/class="error/)) {
+					new Message({message: 'Item was updated successfully'});
+					
+					ui.close();
+				} else {
+					new Message({type: 'error', message: 'Not all fields were filled in'});
+				}
 			}
 		});
-	} else {
-		// Element is DOM form object
-		return $(element).request({
-			onSuccess: function(transport) {
-				showThickBox(transport);
+	},
+	
+	updateContent: function(content) {
+		$('module_content').update(content);
+		$('module_content').fire('norexui:update');
+		this.updateEvents();
+	},
+
+	deleteConfirm: function(event) {
+		el = Event.element(event);
+		var message = el.title ? el.title : "Are you sure you want to delete this? Deleting it will also remove all sub-items";
+		event.stop(event);
+		elFade = el.tagName == 'FORM' ? el.up('tr') : el;
+		if (confirm(message)) {
+			new Effect.Fade(elFade, {
+				duration: 0.5
+			});
+			args = {onComplete: function(transport) {ui.updateContent(transport.responseText);}};
+			switch (el.tagName) {
+			case 'FORM': return el.request({});
+			case 'A': return new Ajax.Request(el.href, {});
 			}
-		});
+		} else {
+			event.stop(event);
+		}
 	}
-}
+});
 
-function showThickBox(transport) {
+var ui;
+Event.observe(window, 'load', function(e) {
+	ui = new NorexUI();
+	});
 
-	facebox.loading();
-	facebox.reveal(transport.responseText);
-	new Effect.Appear($('facebox'), {duration: 0.2, fps: 100});
-	//$('facebox').show();
-	
-	if (form = $('facebox').down('form')) {
-		Event.observe(form, 'submit', function(event) {
-	  		formSubmit(form);
-	  		Event.stop(event);
-	 	});
- 	}
-	
-}
-
-function hideThickBox() {
-	new Effect.Fade($('facebox'), {duration: 0.2, fps: 100});
-	return true;
+var myCustomOnChangeHandler = function(inst) {
+	$(inst.id).value = inst.getBody().innerHTML;
 }
 
 function initRTE(mode, theme, name, stylesheet, bodyId, bodyClass) {
-	
 	tinyMCE.init({
 		mode : mode,
 		theme : theme,
@@ -127,6 +205,7 @@ function initRTE(mode, theme, name, stylesheet, bodyId, bodyClass) {
 		content_css : stylesheet,
 	    plugin_insertdate_dateFormat : "%Y-%m-%d",
 	    body_id : bodyId,
+	    onchange_callback : "myCustomOnChangeHandler",
 	    body_class : bodyClass,
 	    plugin_insertdate_timeFormat : "%H:%M:%S",
 		file_browser_callback : "norexFileBrowser",
