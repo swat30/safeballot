@@ -15,7 +15,6 @@ function deleteConfirm(form) {
 
 ////////////////////////////////////////////////
 var Message = Class.create({
-	alert('here');
   type: 'success',
   message: '',
   delay: 8,
@@ -23,6 +22,7 @@ var Message = Class.create({
   classnames: ['success', 'error', 'warning'],
   
   initialize: function(options) {
+  	alert('here');
     if (options.type) this.type = options.type;
     if (options.message) this.message = options.message;
     this._show();
