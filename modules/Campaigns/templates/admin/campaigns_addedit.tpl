@@ -1,17 +1,18 @@
 {literal}
 <script language="text/javascript">
 var updateEndDate = function(element) {
+	$(element);
 	var startEl = element.getElementsBySelector('option');
 	var num;
 	var elPart = element.readAttribute('name').sub("start_date", "");
 	var endEl = $$('[name="end_date'+elPart+'"]')['0'].getElementsBySelector('option');
-	$(startEl);
+
 	startEl.each(function(el) {
 		if (el.selected) {
 			num = el.value;
 		}
 	});
-	$(endEl);
+
 	endEl.each(function(el) {
 		if (el.readAttribute('value') == num){
 			el.selected=true;
