@@ -12,7 +12,7 @@
 
 {/if}
 
-<table border="0" cellspacing="0" cellpadding="0" class="adminList" style="clear: both; float: left; padding-bottom: 5px;">
+<table border="0" cellspacing="0" cellpadding="0" class="adminList" style="clear: both; margin-bottom: 5px;">
 	<tr>
 		<th valign="center">Name</th>
 		<th valign="center" style="width: 250px">E-mail</th>
