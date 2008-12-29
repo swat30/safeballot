@@ -5,13 +5,13 @@ var updateEndDate = function(element) {
 	var num;
 	var elPart = element.readAttribute('name').sub("start_date", "");
 	var endEl = $$('[name="end_date'+elPart+'"]')['0'].getElementsBySelector('option');
-	
+	$(startEl);
 	startEl.each(function(el) {
 		if (el.selected) {
 			num = el.value;
 		}
 	});
-	
+	$(endEl);
 	endEl.each(function(el) {
 		if (el.readAttribute('value') == num){
 			el.selected=true;
