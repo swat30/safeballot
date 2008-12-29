@@ -140,8 +140,8 @@ var NorexUI = Class.create(Facebox, {
 				}
 			},
 			onComplete: function(transport) {
-				alert('top');
 				if (!transport.responseText.match(/class="error/)) {
+					alert('hea');
 					new Message({message: 'Item was updated successfully'});
 					alert('In complete');
 					ui.close();
