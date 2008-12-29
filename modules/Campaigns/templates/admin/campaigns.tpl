@@ -1,3 +1,4 @@
+
 <h3>Manage <i>{$user->getAuthGroupName()}</i> Campaigns</h3>
 <div id="header">
 	<ul id="primary" class="plain">
@@ -42,7 +43,7 @@
 					<input type="image" src="/images/admin/printer.png" title="Generate hash PDF" />
 				</form>
 				{/if}
-				<form method="POST" action="/admin/Campaigns" onsubmit="return deleteConfirm({$campaign->getId()})">
+				<form method="POST" action="/admin/Campaigns" class="norexui_delete">
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 					<input type="hidden" name="section" value="campaigndelete" />
 					<input type="image" name="delete" id="delete" value="delete" src="/images/admin/cross.gif" title="Delete campaign" />

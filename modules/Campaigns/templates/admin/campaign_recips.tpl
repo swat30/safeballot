@@ -29,7 +29,7 @@
 					<input type="hidden" name="recipient_id" value="{$recipient->getId()}" />
 					<input type="image" src="/images/admin/user_edit.png" />
 				</form>
-				<form method="POST" action="/admin/Campaigns" onsubmit="return !deleteConfirm({$recipient->getId()})">
+				<form method="POST" action="/admin/Campaigns" class="norexui_delete">
 					<input type="hidden" name="id" value="{$recipient->getId()}" />
 					<input type="hidden" name="section" value="recipdelete" />
 					<input type="hidden" name="group_id" value="{$user->getAuthGroup()}" />
