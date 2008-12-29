@@ -95,7 +95,6 @@ var optionDelete = function(element) {
 }
 
 var updateEndDate = function(element) {
-	alert(element);
 	$(element);
 	var startEl = element.getElementsBySelector('option');
 	var num;
