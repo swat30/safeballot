@@ -136,11 +136,11 @@ var NorexUI = Class.create(Facebox, {
 				  		Event.stop(event);
 				 	});
 				} else {
-					alert('in success');
 					ui.updateContent(transport.responseText);
 				}
 			},
 			onComplete: function(transport) {
+				alert('top');
 				if (!transport.responseText.match(/class="error/)) {
 					new Message({message: 'Item was updated successfully'});
 					alert('In complete');
