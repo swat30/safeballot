@@ -113,7 +113,7 @@
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 					<input type="image" src="/images/admin/user_comment.png" title="Check individual voting status" />
 				</form>
-				<form action="/admin/Campaigns" method="post" style="float: left;">
+				<form action="/admin/Campaigns" method="post" style="float: left;" class="norexui_archive">
 					<input type="hidden" name="section" value="archivecampaign" />
 					<input type="hidden" name="campaign_id" value="{$campaign->getId()}" />
 					<input type="image" src="/images/admin/folder_table.png" title="Archive" />
