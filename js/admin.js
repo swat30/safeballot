@@ -75,6 +75,7 @@ var NorexUI = Class.create(Facebox, {
 		$$('form.norexui_addedit').invoke('observe', 'submit', this.addedit);
 		$$('form.norexui_delete').invoke('observe', 'submit', this.deleteConfirm);
 		$$('li.norexui_delete').invoke('observe', 'click', this.deleteConfirm);
+		$$('form.norexui_archive').invoke('observe', 'submit', this.archiveConfirm);
 		
 		$$('div#header ul#primary:not(ul.plain) li:not(li.plain)').invoke('observe', 'click', this.addedit);
 
@@ -141,12 +142,25 @@ var NorexUI = Class.create(Facebox, {
 			},
 			onComplete: function(transport) {
 				if (!transport.responseText.match(/class="error/)) {
-					//new Message({message: 'Item was updated successfully'});
-					
+					new Message({message: 'Item was updated successfully'});
+					alert('sadfsa');
 					ui.close();
 				} else {
-					//new Message({type: 'error', message: 'Not all fields were filled in'});
+					new Message({type: 'error', message: 'Not all fields were filled in'});
 				}
+			}
+		});
+	},
+	
+	updateRows: function() {
+		var curRow = '1';
+		var tds = document.select('td');
+		tds.each(function(td){
+			if($(td).hasClassName('row1') || $(td).hasClassName('row2')){
+				var class = $(td).readAttribute('class');
+				$(td).removeClassName(class);
+				$(td).addClassName('row'+curRow);
+				if(curRow == '1') curRow = '2'; else curRow = '1';
 			}
 		});
 	},
@@ -160,6 +174,25 @@ var NorexUI = Class.create(Facebox, {
 	deleteConfirm: function(event) {
 		el = Event.element(event);
 		var message = el.title ? el.title : "Are you sure you want to delete this? Deleting it will also remove all sub-items";
+		event.stop(event);
+		elFade = el.tagName == 'FORM' ? el.up('tr') : el;
+		if (confirm(message)) {
+			new Effect.Fade(elFade, {
+				duration: 0.5
+			});
+			args = {onComplete: function(transport) {ui.updateContent(transport.responseText);}};
+			switch (el.tagName) {
+			case 'FORM': return el.request({});
+			case 'A': return new Ajax.Request(el.href, {});
+			}
+		} else {
+			event.stop(event);
+		}
+	},
+	
+	archiveConfirm: function(event) {
+		el = Event.element(event);
+		var message = el.title ? el.title : "This item will be permanently archived. Continue?";
 		event.stop(event);
 		elFade = el.tagName == 'FORM' ? el.up('tr') : el;
 		if (confirm(message)) {
