@@ -143,11 +143,11 @@ var NorexUI = Class.create(Facebox, {
 			onComplete: function(transport) {
 				if (!transport.responseText.match(/class="error/)) {
 					alert('before message');
-					new Message({message: 'Item was updated successfully'});
+					//new Message({message: 'Item was updated successfully'});
 					alert('after');
 					ui.close();
 				} else {
-					new Message({type: 'error', message: 'Not all fields were filled in'});
+					//new Message({type: 'error', message: 'Not all fields were filled in'});
 				}
 			}
 		});
