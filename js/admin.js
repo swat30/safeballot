@@ -151,19 +151,6 @@ var NorexUI = Class.create(Facebox, {
 		});
 	},
 	
-	updateRows: function() {
-		var curRow = '1';
-		var tds = document.select('td');
-		tds.each(function(td){
-			if($(td).hasClassName('row1') || $(td).hasClassName('row2')){
-				var class = $(td).readAttribute('class');
-				$(td).removeClassName(class);
-				$(td).addClassName('row'+curRow);
-				if(curRow == '1') curRow = '2'; else curRow = '1';
-			}
-		});
-	},
-	
 	updateContent: function(content) {
 		$('module_content').update(content);
 		$('module_content').fire('norexui:update');
