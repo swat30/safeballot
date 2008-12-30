@@ -513,5 +513,17 @@ class Campaign {
 		}
 		return $retUsers;
 	}
+	
+	public function questionError(){
+		$err = false;
+		if(count($this->getChoices()) < 1) return true;
+		foreach($this->getChoices() as $parent){
+			if(count($this->getChoices($parent->getId())) < 2){
+				$err = true;
+				break;
+			}
+		}
+		return $err;
+	}
 }
 ?>

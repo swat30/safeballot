@@ -18,7 +18,7 @@
 	</tr>
 	{foreach from=$campaigns.upcoming item=campaign}
 		<tr class="{cycle values="row1,row2"}">
-			<td>{$campaign->getName()}</td>
+			<td>{if $campaign->questionError()}<img src="/images/admin/exclamation.png" title="Please ensure that there are at least two voting options for each category and that there is at least one category" />{else}<img src="/images/admin/accept.png" title="Valid voting options" />{/if} {$campaign->getName()}</td>
 			<td>{$campaign->getStatus()}</td>
 			<td>
 				<form action="/admin/Campaigns" method="post" style="float: left;">
