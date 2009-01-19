@@ -341,7 +341,7 @@ class Campaign {
 	}
 	
 	public static function getRecipients($company){
-		$sql = 'SELECT id FROM campaign_recipients WHERE group_id="'.$company.'"';
+		$sql = 'SELECT name,id FROM campaign_recipients WHERE group_id="'.$company.'" ORDER BY name ASC';
 		$results = Database::singleton()->query_fetch_all($sql);
 		
 		foreach($results as &$result){
