@@ -6,7 +6,7 @@
 	<li>
 		<ul id="resultsSubList">
 		{foreach from=$campaign->sortVotes($choice->getId()) item=option}
-			<li class="optionResult">{$option->getChoice()}: {math equation="(x / y)*100" x=$option->getVotes() y=$campaign->getVoteCount()}%</li>
+			<li class="optionResult">{$option->getChoice()}: {$option->getVotes()}</li>
 		{/foreach}
 		</ul>
 	</li>
