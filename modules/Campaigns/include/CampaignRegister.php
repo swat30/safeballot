@@ -25,7 +25,7 @@ class CampaignRegister extends User{
 			$body .= "\nE-mail address: ".$form->exportValue('email');
 			$body .= "\nPhone number(s): Work - ".$form->exportValue('phone').', Cell - '.$form->exportValue('cell_phone');
 			$body .= "\n\nRequest sent on ".date("w F jS \a\\t g:ia");
-			mail('register@norex.ca', 'Safeballot: New Request', $body, 'From: Safeballot');
+			mail('register@safeballot.com', 'Safeballot: New Request', $body, 'From: Safeballot');
 		}
 		
 		return $form;
