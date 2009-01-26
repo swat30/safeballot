@@ -420,6 +420,8 @@ class Campaign {
 	
 	public function mailOut($what, $authgroup = null, $useremail = null){
 		$errCnt = 0;
+		$sucCnt = 0;
+		$rtn = "";
 		if(is_null($authgroup)){
 			$authgroup = $_SESSION['authenticated_user']->getAuthGroupName();
 		}
@@ -441,14 +443,13 @@ class Campaign {
 						$body .= "\n\nIf you have any questions please contact ".$authgroup." at ".$useremail;
 						if(!mail($recipient->getEmail(), 'Voting Campaign', $body, "From: Safeballot <safeballot@safeballot.com>\nReply-to: ".$authgroup." <".$useremail.">")){
 							$errCnt++;
-						}
+						} else $sucCnt++;
 					}
 				}
 				
-				if($errCnt > 0){
-					return $errCnt.' e-mail(s) failed to send.';
-				}
-				return 'All e-mails were sent successfully.';
+				if($errCnt > 0)	$rtn .= $errCnt.' e-mail(s) failed to send.'."\n";
+				if($sucCnt > 0)	$rtn .= $sucCnt.' e-mail(s) were sent successfully.';
+				return $rtn;
 			case 'results':
 				$recipients = Campaign::getRecipients($this->group, 'result');
 				$recipients = array_merge($recipients, Campaign::getRecipients($this->group, 'admin'));
