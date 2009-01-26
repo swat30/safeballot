@@ -472,7 +472,7 @@ class Campaign {
 						
 						if(!mail($recipient->getEmail(), 'Voting Campaign Results', $body, "From: Safeballot <safeballot@safeballot.com>")){
 							$errCnt++;
-						}
+						} else $sucCnt++;
 					}
 				}
 				
