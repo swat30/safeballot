@@ -123,7 +123,7 @@ class CampaignUser {
 		
 		$form->addElement('text', 'name', 'Name');
 		$form->addElement('text', 'email', 'E-mail');
-		$chk = & $form->createElement('select', 'contact_type', 'Contact type', array("admin" => "Admin", "result" => "Receive results only", "normal" => "Normal user"));
+		$chk = & $form->createElement('select', 'contact_type', 'Contact type', array("admin" => "Admin", "result" => "Result viewer", "normal" => "Normal user"));
 		$form->addElement($chk);
 		$form->addElement('hidden', 'group_id', $this->group);
 		$form->addElement('submit', 'submit', 'Submit');
