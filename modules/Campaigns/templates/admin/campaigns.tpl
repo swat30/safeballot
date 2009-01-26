@@ -64,7 +64,7 @@
 	</tr>
 	{foreach from=$campaigns.progress item=campaign}
 		<tr class="{cycle values="row1,row2"}">
-			<td>{$campaign->getName()}</td>
+			<td>{if $campaign->questionError()}<img src="/images/admin/exclamation.png" title="Please ensure that there are at least two voting options for each category and that there is at least one category" />{elseif $campaign->getVoteCount() eq 0}<img src="/images/admin/error.png" title="There have been no votes on this campaign" />{else}<img src="/images/admin/accept.png" title="Campaign is currently active" />{/if} {$campaign->getName()}</td>
 			<td>{$campaign->getStatus()}</td>
 			<td>
 				<form action="/admin/Campaigns" method="post" style="float: left;" class="norexui_addedit">

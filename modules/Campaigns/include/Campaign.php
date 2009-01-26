@@ -476,10 +476,9 @@ class Campaign {
 					}
 				}
 				
-				if($errCnt > 0){
-					return $errCnt.' e-mail(s) failed to send.';
-				}
-				return 'All e-mails were sent successfully.';
+				if($errCnt > 0)	$rtn .= $errCnt.' e-mail(s) failed to send.'."\n";
+				if($sucCnt > 0)	$rtn .= $sucCnt.' e-mail(s) were sent successfully.';
+				return $rtn;
 			default:
 				return 'Nothing to e-mail.';
 		}
