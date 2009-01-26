@@ -447,7 +447,7 @@ class Campaign {
 					}
 				}
 				
-				$rtn .= $errCnt.' e-mail(s) failed to send.'."\n";
+				$rtn .= $errCnt.' e-mail(s) failed to send.<br />';
 				$rtn .= $sucCnt.' e-mail(s) were sent successfully.';
 				return $rtn;
 			case 'results':
@@ -476,7 +476,7 @@ class Campaign {
 					}
 				}
 				
-				$rtn .= $errCnt.' e-mail(s) failed to send.'."\n";
+				$rtn .= $errCnt.' e-mail(s) failed to send.<br />';
 				$rtn .= $sucCnt.' e-mail(s) were sent successfully.';
 				return $rtn;
 			default:
