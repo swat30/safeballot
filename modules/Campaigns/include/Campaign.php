@@ -330,7 +330,7 @@ class Campaign {
 	}
 	
 	public function getChoices($parent = 0){
-		$sql = 'SELECT * FROM campaign_choices WHERE campaign_id="'.$this->id.'" AND parent="'.$parent.'" ORDER BY id ASC';
+		$sql = 'SELECT * FROM campaign_choices WHERE campaign_id="'.$this->id.'" AND parent="'.e($parent).'" ORDER BY id ASC';
 		$results = Database::singleton()->query_fetch_all($sql);
 		
 		foreach($results as &$result){
@@ -340,8 +340,10 @@ class Campaign {
 		return $results;
 	}
 	
-	public static function getRecipients($company){
-		$sql = 'SELECT name,id FROM campaign_recipients WHERE group_id="'.$company.'" ORDER BY name ASC';
+	public static function getRecipients($company, $type = null){
+		$sql = 'SELECT name,id FROM campaign_recipients WHERE group_id="'.e($company).'"';
+		if(!is_null($type)) $sql .= ' AND contact_type="'.e($type).'"';
+		$sql .= ' ORDER BY name ASC';
 		$results = Database::singleton()->query_fetch_all($sql);
 		
 		foreach($results as &$result){
@@ -448,7 +450,8 @@ class Campaign {
 				}
 				return 'All e-mails were sent successfully.';
 			case 'results':
-				$recipients = Campaign::getRecipients($this->group);
+				$recipients = Campaign::getRecipients($this->group, 'result');
+				$recipients = array_merge($recipients, Campaign::getRecipients($this->group, 'admin'));
 				$choices = $this->sortVotes();
 				
 				foreach($recipients as &$recipient){

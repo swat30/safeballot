@@ -4,6 +4,7 @@ class CampaignUser {
 	protected $email = null;
 	protected $id = null;
 	protected $group = null;
+	protected $type = null;
 	
 	public function __construct( $id = null ){
 		if(!is_null($id)){
@@ -14,6 +15,7 @@ class CampaignUser {
 			$this->name = $result['name'];
 			$this->email = $result['email'];
 			$this->group = $result['group_id'];
+			$this->type = $result['contact_type'];
 		}
 	}
 	
@@ -33,6 +35,10 @@ class CampaignUser {
 		$this->group = $id;
 	}
 	
+	public function setContactType($type){
+		$this->type = $type;
+	}
+	
 	public function getId(){
 		return $this->id;
 	}
@@ -47,6 +53,10 @@ class CampaignUser {
 	
 	public function getGroup(){
 		return $this->group;
+	}
+	
+	public function getContactType(){
+		return $this->type;
 	}
 	
 	public function save(){
@@ -64,6 +74,9 @@ class CampaignUser {
 		}
 		if(!is_null($this->group)){
 			$sql .= "group_id = \"".e($this->group)."\", ";
+		}
+		if(!is_null($this->type)){
+			$sql .= "contact_type = \"".e($this->type)."\", ";
 		}
 		
 		if (!is_null($this->id)) {
@@ -110,6 +123,8 @@ class CampaignUser {
 		
 		$form->addElement('text', 'name', 'Name');
 		$form->addElement('text', 'email', 'E-mail');
+		$chk = & $form->createElement('select', 'contact_type', 'Contact type', array("admin" => "Admin", "result" => "Receive results only", "normal" => "Normal user"));
+		$form->addElement($chk);
 		$form->addElement('hidden', 'group_id', $this->group);
 		$form->addElement('submit', 'submit', 'Submit');
 		
@@ -122,14 +137,15 @@ class CampaignUser {
 			
 			$defaultValues ['name'] = $this->getName();
 			$defaultValues ['email'] = $this->getEmail();
-
-			$form->setDefaults( $defaultValues );
-		}
+			$defaultValues ['contact_type'] = $this->getContactType();
+		} else $defaultValues ['contact_type'] = "normal";
+		$form->setDefaults( $defaultValues ); 
 		
 		if($form->isSubmitted() && isset($_POST['submit'])){
 			if($form->validate()){
 				$this->name = $form->exportValue('name');
 				$this->email = $form->exportValue('email');
+				$this->type = $form->exportValue('contact_type');
 			
 				$this->save();
 			}
