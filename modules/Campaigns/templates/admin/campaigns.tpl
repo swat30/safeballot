@@ -95,7 +95,7 @@
 	</tr>
 	{foreach from=$campaigns.ended item=campaign}
 		<tr class="{cycle values="row1,row2"}">
-			<td>{$campaign->getName()}</td>
+			<td>{if !$campaign->isResultViewer($user->getId())}<img src="/images/admin/page_white_add.png" title="New results" /> {/if}{$campaign->getName()}</td>
 			<td>{$campaign->getStatus()}</td>
 			<td>
 				<form action="/admin/Campaigns" method="post" style="float: left;" class="norexui_addedit">

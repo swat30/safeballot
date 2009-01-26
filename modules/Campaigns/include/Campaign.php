@@ -528,5 +528,20 @@ class Campaign {
 		}
 		return $err;
 	}
+	
+	public function addResultViewer($id){
+		if(!$this->isResultViewer($id)){
+			$sql = 'UPDATE campaigns SET results_viewed = results_viewed + " '.$id.'" WHERE id='.$this->id;
+			Database::singleton()->query($sql);
+		}
+	}
+	
+	public function isResultViewer($id){
+		$sql = "SELECT results_viewed FROM campaigns WHERE id=".$this->id;
+		$results = Database::singleton()->query_fetch($sql);
+		
+		$viewedBy = explode(' ', $results['results_viewed']);
+		return in_array($id, $viewedBy);
+	}
 }
 ?>

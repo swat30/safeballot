@@ -29,6 +29,7 @@ class Module_Campaigns extends Module {
 				if($this->user->hasPerm('viewcampaign')){
 					$campaign = new Campaign($_REQUEST['campaign_id']);
 					$this->smarty->assign('campaign', $campaign);
+					$campaign->addResultViewer($this->user->getId());
 					return $this->smarty->fetch('admin/campaign_results.tpl');
 				}
 				return $this->smarty->fetch('admin/campaign_recips_addedit.tpl');
@@ -199,6 +200,7 @@ class Module_Campaigns extends Module {
 	}
 	
 	public function topLevelAdmin(){
+		$this->addJS('/modules/Campaigns/js/listreloader.js');
 		if($this->user->hasPerm('viewcampaign')){
 			$campaigns = Campaign::getCampaigns($this->user->getAuthGroup(), 0);
 			$this->smarty->assign('campaigns', $campaigns);
