@@ -447,8 +447,8 @@ class Campaign {
 					}
 				}
 				
-				if($errCnt > 0)	$rtn .= $errCnt.' e-mail(s) failed to send.'."\n";
-				if($sucCnt > 0)	$rtn .= $sucCnt.' e-mail(s) were sent successfully.';
+				$rtn .= $errCnt.' e-mail(s) failed to send.'."\n";
+				$rtn .= $sucCnt.' e-mail(s) were sent successfully.';
 				return $rtn;
 			case 'results':
 				$recipients = Campaign::getRecipients($this->group, 'result');
@@ -476,8 +476,8 @@ class Campaign {
 					}
 				}
 				
-				if($errCnt > 0)	$rtn .= $errCnt.' e-mail(s) failed to send.'."\n";
-				if($sucCnt > 0)	$rtn .= $sucCnt.' e-mail(s) were sent successfully.';
+				$rtn .= $errCnt.' e-mail(s) failed to send.'."\n";
+				$rtn .= $sucCnt.' e-mail(s) were sent successfully.';
 				return $rtn;
 			default:
 				return 'Nothing to e-mail.';
