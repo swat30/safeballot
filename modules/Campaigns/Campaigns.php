@@ -237,7 +237,7 @@ class Module_Campaigns extends Module {
 					$form = $campaign->getVoteForm($_REQUEST['hash']);
 					$this->smarty->assign('campaign', $campaign);
 					$this->smarty->assign('form', $form);
-					if($form->validate() && $form->isSubmitted() && isset($_POST['submit'])){
+					if($form->validate() && $form->isSubmitted() && isset($_POST['vote_submit'])){
 						foreach($_POST['vote_choice'] as $selChoice){
 							$uChoice = new CampaignChoice($selChoice);
 							$uChoice->setVote($_REQUEST['hash']);

@@ -311,7 +311,8 @@ class Campaign {
 					$form->addGroup($options, 'vote_choice['.$choice->getId().']', $choice->getChoice(), '<br/>');
 				}
 			}
-
+			
+			$form->addElement('hidden', 'vote_submit', null, true);
 			$form->addElement('submit', 'submit', 'Vote', array('onclick' => 'javascript: disableBut(this);'));
 			
 			return $form;
