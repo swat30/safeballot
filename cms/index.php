@@ -9,11 +9,11 @@
  * @subpackage Core
  * @version 2.0
  */
-
+/*
 if(($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTP_HOST'] != 'www.safeballot.com') && $_SERVER['HTTP_HOST'] != 'safeballot'){
 	header("Location: http://www.safeballot.com".$_SERVER['REQUEST_URI']);
 }
-
+*/
 //header("p3p: CP=\"ALL DSP COR PSAa PSDa OUR NOR ONL UNI COM NAV\"");
 
 /**
