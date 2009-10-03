@@ -25,6 +25,8 @@ $auth_container = new CMSAuthContainer();
 $auth = new CMSAuth($auth_container, null, 'authHTML');
 $auth->start();
 
+var_dump($auth);
+
 if ($auth->checkAuth()) {
 	// set templates dir to the admin templates location
 	$smarty->template_dir = SITE_ROOT . '/cms/templates';
