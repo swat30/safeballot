@@ -14,7 +14,7 @@ if(($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTP_HOST'] != 'www.safeballot.com') 
 	header("Location: http://www.safeballot.com".$_SERVER['REQUEST_URI']);
 }
 
-header("p3p: CP=\"ALL DSP COR PSAa PSDa OUR NOR ONL UNI COM NAV\"");
+//header("p3p: CP=\"ALL DSP COR PSAa PSDa OUR NOR ONL UNI COM NAV\"");
 
 /**
  * Require the site initialization file
