@@ -73,9 +73,9 @@ function authHTML($data, $status, $obj = null) {
 		$smarty->assign('activemodule', $modules[0]['module']);
 	}
 	
-	if(!is_null($obj)){
+	/*if(!is_null($obj)){
 		$smarty->assign('authErr', $obj->getError());
-	}
+	}*/
 	
 	$smarty->assign('module', 'User');
 	$content = $smarty->fetch('login.tpl');

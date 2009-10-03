@@ -902,7 +902,6 @@ class Auth {
                 && isset($this->session['timestamp'])
                 && ($this->session['timestamp'] + $this->expire) < time()) {
                 $this->log('Session Expired', AUTH_LOG_INFO);
-                echo 1;
                 $this->expired = true;
                 $this->status = AUTH_EXPIRED;
                 $this->logout();
@@ -915,7 +914,6 @@ class Auth {
                 && ($this->session['idle'] + $this->idle) < time()) {
                 $this->log('Session Idle Time Reached', AUTH_LOG_INFO);
                 $this->idled = true;
-                echo 2;
                 $this->status = AUTH_IDLED;
                 $this->logout();
                 return false;
@@ -949,7 +947,6 @@ class Auth {
                         $this->expired = true;
                         $this->status = AUTH_SECURITY_BREACH;
                         $this->logout();
-                        echo 3;
                         return false;
                     }
 
@@ -964,7 +961,6 @@ class Auth {
                         $this->expired = true;
                         $this->status = AUTH_SECURITY_BREACH;
                         $this->logout();
-                        echo 4;
                         return false;
                     }
 
@@ -978,7 +974,6 @@ class Auth {
                         $this->expired = true;
                         $this->status = AUTH_SECURITY_BREACH;
                         $this->logout();
-                        echo 5;
                         return false;
                     }
 
@@ -994,7 +989,6 @@ class Auth {
                         $this->status = AUTH_SECURITY_BREACH;
                         $this->logout();
                         $this->login();
-                        echo 6;
                         return false;
                     }
                 }
@@ -1007,7 +1001,6 @@ class Auth {
                         $this->expired = true;
                         $this->status = AUTH_CALLBACK_ABORT;
                         $this->logout();
-                        echo 7;
                         return false;
                     }
                 }
@@ -1017,11 +1010,9 @@ class Auth {
             }
         } else {
             $this->log('Unable to locate session storage.', AUTH_LOG_DEBUG);
-            echo 8;
             return false;
         }
         $this->log('No login session.', AUTH_LOG_DEBUG);
-        echo 9;
         return false;
     }
 
