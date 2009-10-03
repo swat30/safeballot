@@ -312,11 +312,15 @@ class Campaign {
 				}
 			}
 
-			$form->addElement('submit', 'submit', 'Vote');
+			$form->addElement('submit', 'submit', 'Vote', array('id' => 'vote_submit'));
 			
 			return $form;
 		}
 		return false;
+	}
+	
+	public function getHashKeyForm($email){
+		
 	}
 	
 	public function getHashForm(){
@@ -441,7 +445,7 @@ class Campaign {
 						$body .= "\n\nPlease goto the following link to vote: https://www.safeballot.com/Vote/".$recipient->getHash($this->getId());
 						$body .= "\nOr you may goto https://www.safeballot.com/Vote/ and enter '".$recipient->getHash($this->getId())."'.";
 						$body .= "\n\nIf you have any questions please contact ".$authgroup." at ".$useremail;
-						if(!mail($recipient->getEmail(), 'Voting Campaign', $body, "From: Safeballot <safeballot@safeballot.com>\nReply-to: ".$authgroup." <".$useremail.">")){
+						if(!mail($recipient->getEmail(), 'Voting Campaign', $body, "From: ".$authgroup." via Safeballot <safeballot@safeballot.com>\nReply-to: ".$authgroup." <".$useremail.">")){
 							$errCnt++;
 						} else $sucCnt++;
 					}
