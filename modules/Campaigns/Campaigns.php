@@ -244,6 +244,7 @@ class Module_Campaigns extends Module {
 						}
  						return $this->smarty->fetch('votesucceed.tpl');
 					} else {
+						$this->parentSmarty->addJS('/modules/Campaigns/js/frontEnd.js');
 						return $this->smarty->fetch('vote.tpl');
 					}
 				}

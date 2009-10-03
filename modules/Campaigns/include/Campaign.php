@@ -312,7 +312,7 @@ class Campaign {
 				}
 			}
 
-			$form->addElement('submit', 'submit', 'Vote', array('id' => 'vote_submit'));
+			$form->addElement('submit', 'submit', 'Vote', array('id' => 'vote_submit', 'onclick' => 'javascript: disableBut(this);'));
 			
 			return $form;
 		}
