@@ -25,7 +25,7 @@ $auth_container = new CMSAuthContainer();
 $auth = new CMSAuth($auth_container, null, 'authHTML');
 $auth->start();
 
-var_dump($auth);
+var_dump($auth->checkAuth());
 
 if ($auth->checkAuth()) {
 	// set templates dir to the admin templates location
