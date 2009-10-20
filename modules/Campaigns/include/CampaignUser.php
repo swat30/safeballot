@@ -118,6 +118,60 @@ class CampaignUser {
 		return false;
 	}
 	
+	public static function getByEmail($addr){
+		if(filter_var($addr, FILTER_VALIDATE_EMAIL)){
+			$sql = 'SELECT id FROM campaign_recipients WHERE email = \''.e($addr)."'";
+			$result = Database::singleton()->query_fetch_all($sql);
+			
+			if($result && count($result) == 1){
+				$id = $result[0]['id'];
+				$sql = 'INSERT INTO campaign_hash_requests SET IP = \''.$_SERVER['REMOTE_ADDR'].'\', email = \''.e($addr).'\'';
+				
+				Database::singleton()->query($sql);
+				
+				$sql = 'SELECT hash,campaign_id FROM campaign_hash WHERE user_id = '.$id;
+				$results = Database::singleton()->query_fetch_all($sql);
+				
+				$body = 'This e-mail address was used to request the retrieval of hash keys on the SafeBallot system. '.
+					'If you believe you have received this message in error, please contact the person in charge of voting '.
+					'campaigns at your organization and ensure to keep the original copy of this contact.\n\nHash keys:\n';
+				if($results){
+					for($i = 0; $i < count($results); $i++){
+						$cid = $results[$i]['campaign_id'];
+						$hash = $results[$i]['hash'];
+						$campaign = new Campaign($cid);
+						
+						if($campaign->calcStatus(true) == 1){
+							$body .= '\nCampaign \''.$campaign->getName().'\' -> '.$hash;
+						}
+					}
+				} else
+					$body .= 'There are currently no voting campaigns in progress.';
+					
+				mail($addr, 'Voting Campaign', $body, "From: Safeballot <safeballot@safeballot.com>");
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
+	public static function getRetievalForm(&$err = false, $target = '/Vote/Retrieve_Key'){
+		$form = new Form('campaign_hash_retrieval', 'POST', $target);
+		
+		$form->addElement('text', 'email', 'Your E-mail Address');
+		$form->addElement('submit', 'submit', 'Retrieve');
+		$form->addRule('email', 'You must enter a valid e-mail address', 'required');
+		
+		if($form->isSubmitted() && isset($_POST['submit'])){
+			if($form->validate()){
+				$err = !CampaignUser::getByEmail($form->exportValue('email'));
+			}
+		}
+		
+		return $form;
+	}
+	
 	public function getAddEditForm($target = '/admin/Campaigns&section=recipaddedit'){
 		$form = new Form ( 'campaign_recipient_addedit', 'POST', $target, '', array ('class' => 'admin' ) );
 		

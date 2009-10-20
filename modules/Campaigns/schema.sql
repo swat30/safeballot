@@ -83,3 +83,16 @@ CREATE TABLE `campaign_votes` (
   PRIMARY KEY  (`id`),
   UNIQUE KEY `hash` (`hash`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `campaign_hash_requests`
+-- 
+
+CREATE TABLE `campaign_hash_requests` (
+`id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`IP` VARCHAR( 64 ) NOT NULL ,
+`email` TEXT NOT NULL ,
+`date` DATE NOT NULL
+) ENGINE = MYISAM ;

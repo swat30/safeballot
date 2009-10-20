@@ -229,6 +229,15 @@ class Module_Campaigns extends Module {
 				return $this->smarty->fetch('registersucceed.tpl');
 			}
 			return $this->smarty->fetch('register.tpl');
+		} else if(@$_REQUEST['hash'] == 'Retrieve_Key'){
+			$form = CampaignUser::getRetievalForm($err);
+			if($form->isSubmitted() && isset($_POST['submit']) && $form->validate()){
+				if($err)
+					return "<h1>Failed</h1><br /><p>Your e-mail address was invalid.</p>";
+				return "<h1>Success</h1><br /><p>Hash key recovery has been sent.</p>";
+			}
+			$this->smarty->assign('form', $form);
+			return $this->smarty->fetch('hashretrieve.tpl');
 		} else if(!is_null(@$_REQUEST['hash']) && !empty($_REQUEST['hash'])){
 			$cData = Campaign::checkHash($_REQUEST['hash']);
 			if($cData){

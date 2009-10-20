@@ -320,10 +320,6 @@ class Campaign {
 		return false;
 	}
 	
-	public function getHashKeyForm($email){
-		
-	}
-	
 	public function getHashForm(){
 		$form = new Form( 'insert_hash', 'POST', '/Vote/', '');
 		$form->addElement('text', 'hash', 'Hash');
