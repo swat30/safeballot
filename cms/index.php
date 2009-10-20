@@ -10,7 +10,7 @@
  * @version 2.0
  */
 
-if($_SERVER['HTTPS'] == 'on'){
+if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on'){
 	header("Location: http://www.safeballot.com".$_SERVER['REQUEST_URI']);
 }
 
