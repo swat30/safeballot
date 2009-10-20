@@ -25,7 +25,7 @@ include_once(SITE_ROOT . '/core/User.php');
 //include_once(SITE_ROOT . '/modules/Cart/include/CartBasket.php');
 //include_once(SITE_ROOT . '/modules/Cart/include/CartProduct.php');
 
-session_start();
+//session_start();
 
 date_default_timezone_set('America/Halifax');
 define('DISPLAY_TYPE_TABLE', 'table');
