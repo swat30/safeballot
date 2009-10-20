@@ -132,23 +132,23 @@ class CampaignUser {
 				$sql = 'SELECT hash,campaign_id FROM campaign_hash WHERE user_id = '.$id;
 				$results = Database::singleton()->query_fetch_all($sql);
 				
-				$body = 'This e-mail address was used to request the retrieval of hash keys on the SafeBallot system. '.
-					'If you believe you have received this message in error, please contact the person in charge of voting '.
-					'campaigns at your organization and ensure to keep the original copy of this contact.\n\nHash keys:\n';
+				$body = "This e-mail address was used to request the retrieval of hash keys on the SafeBallot system. ".
+					"If you believe you have received this message in error, please contact the person in charge of voting ".
+					"campaigns at your organization and ensure to keep the original copy of this contact.\n\nHash keys:\n";
 				if($results){
 					for($i = 0; $i < count($results); $i++){
-						$cid = $results[$i]['campaign_id'];
-						$hash = $results[$i]['hash'];
+						$cid = $results[$i]["campaign_id"];
+						$hash = $results[$i]["hash"];
 						$campaign = new Campaign($cid);
 						
 						if($campaign->calcStatus(true) == 1){
-							$body .= '\nCampaign \''.$campaign->getName().'\' -> '.$hash;
+							$body .= "\nCampaign '".$campaign->getName()."' -> ".$hash;
 						}
 					}
 				} else
-					$body .= 'There are currently no voting campaigns in progress.';
+					$body .= "There are currently no voting campaigns in progress.";
 					
-				mail($addr, 'Voting Campaign', $body, "From: Safeballot <safeballot@safeballot.com>");
+				mail($addr, 'Hash Key Retrieval', $body, "From: Safeballot <safeballot@safeballot.com>");
 				return true;
 			}
 		}
