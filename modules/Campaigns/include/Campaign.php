@@ -313,7 +313,7 @@ class Campaign {
 			}
 			
 			$form->addElement('hidden', 'vote_submit', null, true);
-			$form->addElement('submit', 'submit', 'Vote', array('onclick' => 'javascript: disableBut(this);'));
+			$form->addElement('submit', 'submit', 'Vote (Click only ONCE)');
 			
 			return $form;
 		}
