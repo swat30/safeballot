@@ -119,7 +119,7 @@ class CampaignUser {
 	}
 	
 	public static function getByEmail($addr){
-		if(filter_var($addr, FILTER_VALIDATE_EMAIL)){
+		if(eregi('^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.([a-zA-Z]{2,4})$', $addr)){
 			$sql = 'SELECT id FROM campaign_recipients WHERE email = \''.e($addr)."'";
 			$result = Database::singleton()->query_fetch_all($sql);
 			
