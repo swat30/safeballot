@@ -5,6 +5,7 @@ if($_SERVER['LOGNAME'] == 'safeballots'){
 	include_once('core/Database.php');
 	include_once('modules/Campaigns/include/Campaign.php');
 	include_once('modules/Campaigns/include/CampaignUser.php');
+	include_once('include/Site.php');
 	$sql = 'SELECT id FROM campaigns where autosend = 1';
 	$debug = false;
 	if(@$argv[1] == 'debug'){
