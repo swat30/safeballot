@@ -1,4 +1,3 @@
-function disableBut(item){
-	$(item);
-	item.disabled = true;
-}
+$('vote').onsubmit = function() {
+	$('submit').disabled = true;
+};
