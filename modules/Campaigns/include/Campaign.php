@@ -225,7 +225,7 @@ class Campaign {
 	}
 	
 	public function getAddEditForm($target = '/admin/Campaigns&section=addedit'){
-		$form = new Form ( 'campaign_addedit', 'POST', $target, '', array ('class' => 'admin' ) );
+		$form = new Form ( 'campaign_addedit', 'POST', $target, '', array ('class' => 'admin', 'onsubmit' => 'disableSubmit(this);' ) );
 		
 		$form->addElement('text', 'name', 'Name');
 		$form->addElement('select', 'auto_send', 'Auto-reminder on start', array(0=>'Disable', 1=>'Enable'));
